@@ -163,6 +163,7 @@ public_by_type_ci %>%
   ylab("95% CI of the proportion of publicly available material\n (Clopper-Pearson exact CI)") +
   coord_flip()
 
+rm(list = ls())
 
 #===============================================================================
 # group data according to the research questions
@@ -267,7 +268,6 @@ freq_table <-
   spread(key = is_public, value = n, fill = 0L) %>%
   ungroup()
 
-rm(list = setdiff(ls(), c("df_long", "freq_table")))
 
 #===============================================================================
 # descriptive statistics: frequency of groups
@@ -308,4 +308,4 @@ p_tmp <-
 
 ggsave("output/availability_proportion_difference.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
 
-rm(pw_results, comp_table, p_tmp)
+rm(list = ls())
