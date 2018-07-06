@@ -1,6 +1,12 @@
 library(tidyverse)
 import::from(pairwiseCI, pairwiseCI)
+import::from(roomba, roomba) # devtools::install_github("ropenscilabs/roomba")
+
+theme_set(theme_grey(base_size = 7))
+
 source("r/io.R")
+
+
 
 #===============================================================================
 # load and convert data to a long format
@@ -97,3 +103,148 @@ df_long <-
 
 
 rm(study_method, qual_signals, quan_signals)
+
+
+#===============================================================================
+# group data according to the research questions
+
+
+# RQ 1.1: Is there a difference in the availability of study materials for
+# quantitative and qualitative studies?
+pub_study_by_method <-
+  df_long %>%
+  filter(
+    method %in% c("qual", "quan"),
+    type == "study") %>%
+  select(id, method, is_public) %>%
+  mutate(method = str_c("study_", method)) %>%
+
+  # rename for the RQ table
+  mutate(is_public = if_else(is_public, "public", "private")) %>%
+  rename(group = method) %>%
+  mutate(rq = "1.1")
+
+
+# RQ 1.2: Is there a difference in the availability of data for quantitative and
+# qualitative studies?
+pub_data_by_method <-
+  df_long %>%
+
+  # recode study data regardless of sub-types (remove other types)
+  mutate(type = recode(type,
+    qualraw       = "data_qual",
+    qualcoded     = "data_qual",
+    qualcomplete  = "data_qual",
+    quanraw       = "data_quan",
+    quanprocessed = "data_quan",
+    .default      = NA_character_
+    )) %>%
+  filter(!is.na(type)) %>%
+
+  # if one of the subtype is public, count as public
+  select(id, type, is_public) %>%
+  group_by(id, type) %>%
+  summarize(is_public = any(is_public)) %>%
+  ungroup() %>%
+
+  # relabel and rename for the RQ table
+  mutate(is_public = if_else(is_public, "public", "private")) %>%
+  rename(group = type) %>%
+  mutate(rq = "1.2")
+
+
+# RQ 1.3: Is preprocessed data more frequently available than raw data?
+pub_data_by_maturity <-
+  df_long %>%
+
+  # recode study data regardless of sub-types (remove other types)
+  mutate(type = recode(type,
+    qualraw       = "data_raw",
+    quanraw       = "data_raw",
+    qualcoded     = "data_processed",
+    qualcomplete  = "data_processed",
+    quanprocessed = "data_processed",
+    .default      = NA_character_
+    )) %>%
+  filter(!is.na(type)) %>%
+
+  # if one of the subtype is public, count as public
+  select(id, type, is_public) %>%
+  group_by(id, type) %>%
+  summarize(is_public = any(is_public)) %>%
+  ungroup() %>%
+
+  # relabel and rename for the RQ table
+  mutate(is_public = if_else(is_public, "public", "private")) %>%
+  rename(group = type) %>%
+  mutate(rq = "1.3")
+
+
+# RQ 1.4: Is software source code more frequently available than hardware specifications?
+pub_product_by_type <-
+  df_long %>%
+  filter(type %in% c("hardware", "software")) %>%
+  select(id, type, is_public) %>%
+
+  # relabel and rename for the RQ table
+  mutate(is_public = if_else(is_public, "public", "private")) %>%
+  rename(group = type) %>%
+  mutate(rq = "1.4")
+
+
+#===============================================================================
+# frequency table
+
+freq_table <-
+  bind_rows(
+    pub_study_by_method,
+    pub_data_by_method,
+    pub_data_by_maturity,
+    pub_product_by_type) %>%
+  group_by(rq, group, is_public) %>%
+  summarize(n = n()) %>%
+  spread(key = is_public, value = n, fill = 0L) %>%
+  ungroup()
+
+rm(list = setdiff(ls(), c("df_long", "freq_table")))
+
+#===============================================================================
+# descriptive statistics: frequency of groups
+
+p_tmp <-
+  freq_table %>%
+  gather(key = availability, value = n,  private, public) %>%
+
+  ggplot(aes(x = group, y = n, fill = availability)) +
+  geom_col() +
+  coord_flip() +
+  facet_grid(rq ~ ., scales = "free_y")
+
+ggsave("output/availability_frequency.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
+
+
+#===============================================================================
+# inferential statistics: CI of proportion difference
+
+pw_results <-
+  pairwiseCI(cbind(public, private) ~ group,
+  by = "rq",
+  data = freq_table,
+  method = "Prop.diff",
+  CImethod = "NHS")
+
+comp_table <-
+  roomba(pw_results$byout, c("estimate", "lower", "upper", "compnames", "method")) %>%
+  bind_cols(list(RQ = pw_results$bynames), .)
+
+p_tmp <-
+  comp_table %>%
+  ggplot(aes(x = compnames, y = estimate, ymin = lower, ymax = upper)) +
+  geom_pointrange() +
+  coord_flip() +
+  xlab(NULL) +
+  ylab("Difference of proportion of publicly available materials\n95% CI (Newcombes Hybrid Score)")
+
+ggsave("output/availability__proportion_difference.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
+
+rm(pw_results, comp_table, p_tmp)
