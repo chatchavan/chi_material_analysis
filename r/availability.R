@@ -9,7 +9,6 @@ source("r/io.R")
 df <- load_data("input/results-survey332449.csv")
 
 
-
 existence <-
   df %>%
   select(id, ends_with("_exist")) %>%
@@ -68,20 +67,23 @@ df_long <-
   left_join(claim_related, by = c("id", "type")) %>%
   left_join(public, by = c("id", "type")) %>%
   left_join(location, by = c("id", "type")) %>%
-  left_join(reason, by = c("id", "type"))
+  left_join(reason, by = c("id", "type")) %>%
+  select(-is_exist)  # because of left-join, the table contains only the materials that exist
+
+rm(list = setdiff(ls(), "df_long"))
 
 
 #-------------------------------------------------------------------------------
 # determine methodology
 
-qual_codes <- c("qualraw", "qualcoded", "qualcodebook", "qualcomplete")
-quan_codes <- c("quanraw", "quanprocessed", "quancode")
+qual_data_types <- c("qualraw", "qualcoded", "qualcodebook", "qualcomplete")
+quan_data_types <- c("quanraw", "quanprocessed", "quancode")
 
 study_method <-
   df_long %>%
   mutate(
-    qual = (type %in% qual_codes),
-    quan = (type %in% quan_codes)
+    qual = (type %in% qual_data_types),
+    quan = (type %in% quan_data_types)
   ) %>%
   gather(key = method, value = "tf", qual, quan) %>%
   select(id, type, method, tf) %>%
@@ -93,7 +95,7 @@ df_long <-
   left_join(study_method, by = "id")
 
 
-rm(list = setdiff(ls(), "df_long"))
+rm(study_method)
 
 #===============================================================================
 # H1.1: Study materials or results are available to public more frequently in quantitative than in qualitative studies.
