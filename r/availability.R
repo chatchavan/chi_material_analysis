@@ -77,14 +77,14 @@ rm(list = setdiff(ls(), "df_long"))
 #-------------------------------------------------------------------------------
 # determine methodology
 
-qual_data_types <- c("qualraw", "qualcoded", "qualcodebook", "qualcomplete")
-quan_data_types <- c("quanraw", "quanprocessed", "quancode")
+qual_signals <- c("qualraw", "qualcoded", "qualcodebook", "qualcomplete")
+quan_signals <- c("quanraw", "quanprocessed", "quancode")
 
 study_method <-
   df_long %>%
   mutate(
-    qual = (type %in% qual_data_types),
-    quan = (type %in% quan_data_types)
+    qual = (type %in% qual_signals),
+    quan = (type %in% quan_signals)
   ) %>%
   gather(key = method, value = "tf", qual, quan) %>%
   select(id, type, method, tf) %>%
