@@ -135,7 +135,7 @@ p_tmp <-
   geom_col() +
   coord_flip()
 
-ggsave("output/availability_by_type.pdf", p_tmp, height = 150/72, width = 300/72, unit = "in", dpi = 72)
+ggsave("output/availability_by_type_count.pdf", p_tmp, height = 150/72, width = 300/72, unit = "in", dpi = 72)
 
 
 #-------------------------------------------------------------------------------
@@ -153,7 +153,8 @@ public_by_type_ci <-
       mutate(type = row_type)
   })
 
-public_by_type_ci %>%
+p_tmp <-
+  public_by_type_ci %>%
   mutate(type = factor(type, levels = types_all)) %>%
   mutate(type = fct_rev(type)) %>%
   ggplot(aes(x = type, ymin = conf.low, ymax = conf.high)) +
@@ -162,6 +163,8 @@ public_by_type_ci %>%
   xlab(NULL) +
   ylab("95% CI of the proportion of publicly available material\n (Clopper-Pearson exact CI)") +
   coord_flip()
+
+ggsave("output/availability_by_type_proportion.pdf", p_tmp, height = 150/72, width = 300/72, unit = "in", dpi = 72)
 
 rm(list = ls())
 
@@ -281,7 +284,7 @@ p_tmp <-
   coord_flip() +
   facet_grid(rq ~ ., scales = "free_y")
 
-ggsave("output/availability_frequency.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
+ggsave("output/availability_pairs_frequency.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
 
 
 #===============================================================================
@@ -306,6 +309,6 @@ p_tmp <-
   xlab(NULL) +
   ylab("Difference of proportion of publicly available materials\n95% CI (Newcombes Hybrid Score)")
 
-ggsave("output/availability_proportion_difference.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
+ggsave("output/availability_pairs_proportion_difference.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
 
 rm(list = ls())
