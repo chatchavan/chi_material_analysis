@@ -50,6 +50,3 @@ lookup_col_names <- function(df) {
       ) %>%
     select_at(vars(lut_df$col_name_lime), ~ lut_df$col_name)
 }
-
-
-# TODO: convert list to tibble and save as CSV file

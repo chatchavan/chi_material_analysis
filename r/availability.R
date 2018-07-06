@@ -12,7 +12,6 @@ theme_set(theme_grey(base_size = 7))
 # globally persisting variables
 g <- new.env()
 
-
 # material types
 g$types_data_qual <- c("qualraw", "qualcoded", "qualcodebook", "qualcomplete")
 g$types_data_quan <- c("quanraw", "quanprocessed", "quancode", "quancomplete")
