@@ -6,10 +6,38 @@ source("r/constants.R")
 #  * Export responses as: Answer code
 #  * Export questions as: Question code & question text
 # load and translate data
-load_data <- function(path) {
-  read_delim(path, ";", col_types = cols(.default = col_character()))  %>%
-    lookup_col_names() %>%
+load_data <- function(path, exclude_mismatch = should_exclude_mismatch) {
+  df <-
+    read_delim(path, ";", col_types = cols(.default = col_character()))  %>%
+    lookup_col_names()
+
+  df_materials <-
+    df %>%
     make_long_format()
+
+
+  # detect expertise mismatch and exclude potentially low-quality responses
+  if (exclude_mismatch) {
+
+    df_respondent <-
+      df %>%
+      select(id, starts_with("self_responsible")) %>%
+      rename(
+        study = self_responsible_for_study,
+        prototype = self_responsible_for_prototype) %>%
+      gather(key = responsible_type, value = yn_or_na, study, prototype) %>%
+      filter(yn_or_na == "Y") %>%
+      select(id, responsible_type)
+
+
+    df_materials <-
+      df_materials %>%
+      mutate(meta_type = if_else(type %in% c("hardware", "software"), "prototype", "study")) %>%
+      inner_join(df_respondent, by = c("id", "meta_type" = "responsible_type"))
+  }
+
+  # return
+  df_materials
 }
 
 
