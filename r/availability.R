@@ -1,10 +1,11 @@
 library(tidyverse)
+library(cleanslate) # devtools::install_github("chatchavan/cleanslate@v0.1.0")
 import::from(broom, tidy)
 import::from(pairwiseCI, pairwiseCI)
 import::from(PropCIs, exactci)
 import::from(roomba, roomba) # devtools::install_github("ropenscilabs/roomba")
 
-source("r/persist.R")
+
 source("r/constants.R")
 source("r/io.R")
 
@@ -20,7 +21,7 @@ theme_set(theme_grey(base_size = 7))
 df_long <- load_data("input/results-survey332449.csv")
 
 persist(df_long)
-rm(list = ls())
+rm_all()
 
 
 #===============================================================================
@@ -74,7 +75,7 @@ p_tmp <-
 
 ggsave("output/availability_by_type_proportion.pdf", p_tmp, height = 150/72, width = 300/72, unit = "in", dpi = 72)
 
-rm(list = ls())
+rm_all()
 
 #===============================================================================
 # group data according to the research questions
@@ -219,4 +220,4 @@ p_tmp <-
 
 ggsave("output/availability_pairs_proportion_difference.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
 
-rm(list = ls())
+rm_all()

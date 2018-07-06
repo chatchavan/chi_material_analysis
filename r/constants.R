@@ -1,4 +1,4 @@
-source("r/persist.R")
+library(cleanslate) # devtools::install_github("chatchavan/cleanslate@v0.1.0")
 
 # material types
 types_data_qual <- c("qualraw", "qualcoded", "qualcodebook", "qualcomplete")
