@@ -15,9 +15,6 @@ theme_set(theme_grey(base_size = 7))
 
 #===============================================================================
 # load and convert data to a long format
-# NOTE: export parameters from LimeSurvey
-#  * Export responses as: Answer code
-#  * Export questions as: Question code & question text
 df_long <- load_data("input/results-survey332449.csv")
 
 persist(df_long)

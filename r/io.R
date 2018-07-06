@@ -1,6 +1,10 @@
 library(tidyverse)
 source("r/constants.R")
 
+# NOTE: Expected export parameters from LimeSurvey
+#  * Completion state: Completed responses only
+#  * Export responses as: Answer code
+#  * Export questions as: Question code & question text
 # load and translate data
 load_data <- function(path) {
   read_delim(path, ";", col_types = cols(.default = col_character()))  %>%
