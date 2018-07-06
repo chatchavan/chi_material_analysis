@@ -157,6 +157,28 @@ study_prop_diff <-
     CImethod = "NHS")
 
 rm(study_table, study_df)
+
+#===============================================================================
+# RQ 1.2: Is there a difference in the availability of data for quantitative and
+# qualitative studies?
+
+#-------------------------------------------------------------------------------
+# visualization
+
+qual_data_types <- c("qualraw", "qualcoded", "qualcomplete")
+quan_data_types <- c("quanraw", "quanprocessed")
+
+last_plot <-
+  df_long %>%
+  filter(type %in% union(qual_data_types, quan_data_types)) %>%
+  ggplot(aes(x = type, fill = is_public)) +
+  geom_bar() +
+  coord_flip() +
+  ggtitle("Study results by method")
+
+ggsave("output/1.2_qual_vs_quan_study_results.pdf", last_plot, height = 150/72, width = 300/72, unit = "in", dpi = 72)
+
+rm(last_plot)
   method = "Prop.diff",
   CImethod = "NHS")
 
