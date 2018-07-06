@@ -104,6 +104,28 @@ df_long <-
 
 rm(study_method, qual_signals, quan_signals)
 
+#===============================================================================
+# availability frequency and proportion for each type of materials
+
+# RQ 1: Among the types of materials produced in the course of research,
+#       which ones do authors make available outside their lab?
+
+avail_by_type <-
+  df_long %>%
+  mutate(is_public = if_else(is_public, "public", "private")) %>%
+  select(id, type, is_public) %>%
+  group_by(type, is_public) %>%
+  summarize(n = n()) %>%
+  ungroup()
+
+p_tmp <-
+  avail_by_type %>%
+  ggplot(aes(x = type, y = n, fill = is_public)) +
+  geom_col() +
+  coord_flip()
+
+ggsave("output/availability_by_type.pdf", p_tmp, height = 150/72, width = 300/72, unit = "in", dpi = 72)
+
 
 #===============================================================================
 # group data according to the research questions
