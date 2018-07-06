@@ -1,5 +1,5 @@
 library(tidyverse)
-source("r/globals.R")
+source("r/constants.R")
 
 # load and translate data
 load_data <- function(path) {

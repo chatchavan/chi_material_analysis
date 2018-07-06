@@ -4,7 +4,8 @@ import::from(pairwiseCI, pairwiseCI)
 import::from(PropCIs, exactci)
 import::from(roomba, roomba) # devtools::install_github("ropenscilabs/roomba")
 
-source("r/globals.R")
+source("r/persist.R")
+source("r/constants.R")
 source("r/io.R")
 
 # settings
