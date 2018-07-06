@@ -1,4 +1,5 @@
 library(tidyverse)
+import::from(pairwiseCI, pairwiseCI)
 source("r/io.R")
 
 #===============================================================================
@@ -97,42 +98,61 @@ df_long <-
 
 rm(study_method)
 
-#===============================================================================
-# H1.1: Study materials or results are available to public more frequently in quantitative than in qualitative studies.
 
-public_by_method_count <-
+#===============================================================================
+# RQ 1.1: Is there a difference in the availability of study materials for
+# quantitative and qualitative studies?
+
+#-------------------------------------------------------------------------------
+# visualization
+
+study_df <-
   df_long %>%
-  select(id, method, type, is_public) %>%
-  filter(!is.na(method)) %>%
-  group_by(id, method) %>%
-  summarize(is_public = any(is_public)) %>%
+  filter(
+    method %in% c("qual", "quan"),
+    type == "study") %>%
+  select(id, method, is_public)
+
+last_plot <-
+  study_df %>%
+  ggplot(aes(x = method, fill = is_public)) +
+  geom_bar() +
+  coord_flip() +
+  ggtitle("Study material by method")
+
+ggsave("output/1.1_qual_vs_quan_study_materials.pdf", last_plot, height = 100/72, width = 300/72, unit = "in", dpi = 72)
+
+rm(last_plot)
+
+#-------------------------------------------------------------------------------
+# chi-square test
+
+study_table <-
+  study_df %>%
   group_by(method, is_public) %>%
   summarize(n = n()) %>%
-  ungroup()
+  spread(key = is_public, value = n, fill = 0L) %>%
+  as.data.frame()
 
-public_by_method_total <-
-  public_by_method_count %>%
-  group_by(method) %>%
-  summarize(total = sum(n)) %>%
-  ungroup()
+suppressWarnings(study_table <- column_to_rownames(study_table, "method"))
 
-public_by_method_t <-
-  public_by_method_count %>%
-  spread(is_public, n, fill = 0L) %>%
-  column_to_rownames("method")
+chisq.test(study_table)
+
+rm(study_table)
 
 #-------------------------------------------------------------------------------
-# establish relationship with chi-square test on count
-chisq.test(public_by_method_t)
+# proportion difference
 
+study_table <-
+  study_df %>%
+  mutate(is_public = if_else(is_public, "public", "private")) %>%
+  group_by(method, is_public) %>%
+  summarize(n = n()) %>%
+  spread(key = is_public, value = n, fill = 0L)
 
-#-------------------------------------------------------------------------------
-public_by_method_n <-
-  public_by_method_count %>%
-  filter(is_public == TRUE) %>%
-  left_join(public_by_method_total, by = "method") %>%
-  mutate(percent = n / total) %>%
-  select(method, n_public = n, n_total = total, percent)
+pairwiseCI(cbind(public, private) ~ method,
+  data = study_table,
+  method = "Prop.diff",
+  CImethod = "NHS")
 
-# effect size: percentage difference between the two conditions
-public_by_method_n$percent[2] - public_by_method_n$percent[1]
+rm(study_table, study_df)
