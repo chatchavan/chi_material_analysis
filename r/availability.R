@@ -4,116 +4,23 @@ import::from(pairwiseCI, pairwiseCI)
 import::from(PropCIs, exactci)
 import::from(roomba, roomba) # devtools::install_github("ropenscilabs/roomba")
 
+source("r/globals.R")
 source("r/io.R")
 
 # settings
 theme_set(theme_grey(base_size = 7))
 
-# globally persisting variables
-g <- new.env()
-
-# material types
-g$types_data_qual <- c("qualraw", "qualcoded", "qualcodebook", "qualcomplete")
-g$types_data_quan <- c("quanraw", "quanprocessed", "quancode", "quancomplete")
-g$types_all <- c("study",  g$types_data_qual, g$types_data_quan, "software", "hardware")
-attach(g)
 
 #===============================================================================
 # load and convert data to a long format
 # NOTE: export parameters from LimeSurvey
 #  * Export responses as: Answer code
 #  * Export questions as: Question code & question text
-df <- load_data("input/results-survey332449.csv")
+df_long <- load_data("input/results-survey332449.csv")
 
-existence <-
-  df %>%
-  select(id, ends_with("_exist")) %>%
-  gather(key = type, value = is_exist, ends_with("_exist")) %>%
+persist(df_long)
+rm(list = ls())
 
-  # re-code materials types that exist to TRUE
-  filter(!is.na(is_exist)) %>%
-  mutate(is_exist = TRUE) %>%
-  mutate(type = str_replace(type, "_exist", "")) %>%
-
-  # remove "others" type (need to check them manually)
-  filter(type != "others")
-
-
-claim_related <-
-  df %>%
-  select(id, ends_with("_claim")) %>%
-  gather(key = type, value = is_claim_related, ends_with("_claim")) %>%
-  filter(!is.na(is_claim_related)) %>%
-  mutate(type = str_replace(type, "_claim", "")) %>%
-  mutate(is_claim_related = recode(is_claim_related, `Y` = TRUE, `N` = FALSE))
-
-public <-
-  df %>%
-  select(id, ends_with("_public")) %>%
-  gather(key = type, value = is_public, ends_with("_public")) %>%
-  filter(!is.na(is_public)) %>%
-  mutate(type = str_replace(type, "_public", "")) %>%
-  mutate(is_public = recode(is_public, `Y` = TRUE, `N` = FALSE))
-
-
-location <-
-  df %>%
-  select(id, contains("_in_")) %>%
-  gather(key = type_location, value = y_or_na, contains("_in_")) %>%
-  filter(!is.na(y_or_na)) %>%
-  separate(type_location, into = c("type", "location"), sep = "_", extra = "merge") %>%
-  mutate(location = str_replace(location, "in_", "")) %>%
-
-  group_by(id, type) %>%
-  summarize(location = str_c(location, collapse = ","))
-
-reason <-
-  df %>%
-  select(id, contains("_why_")) %>%
-  gather(key = type_reason, value = y_or_na, contains("_why_")) %>%
-  filter(!is.na(y_or_na)) %>%
-  separate(type_reason, into = c("type", "reason"), sep = "_", extra = "merge") %>%
-  mutate(reason = str_replace(reason, "why_", "")) %>%
-
-  group_by(id, type) %>%
-  summarize(reason = str_c(reason, collapse = ","))
-
-df_long <-
-  existence %>%
-  left_join(claim_related, by = c("id", "type")) %>%
-  left_join(public, by = c("id", "type")) %>%
-  left_join(location, by = c("id", "type")) %>%
-  left_join(reason, by = c("id", "type")) %>%
-  select(-is_exist)  # because of left-join, the table contains only the materials that exist
-
-
-#-------------------------------------------------------------------------------
-# determine methodology
-
-study_method <-
-  df_long %>%
-  mutate(
-    qual = (type %in% types_data_qual),
-    quan = (type %in% types_data_quan)
-  ) %>%
-  gather(key = method, value = "tf", qual, quan) %>%
-  select(id, type, method, tf) %>%
-  filter(tf == TRUE) %>%
-  distinct(id, method)
-
-df_long <-
-  df_long %>%
-  left_join(study_method, by = "id")
-
-
-#===============================================================================
-# put global variables in an environment and remove reference to prevent mutation
-
-g$df_long <- df_long
-rm(list = setdiff(ls(), c("g")))
-detach(g)
-attach(g)
-rm(g)
 
 #===============================================================================
 # availability frequency and proportion for each type of materials
