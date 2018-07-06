@@ -150,8 +150,13 @@ study_table <-
   summarize(n = n()) %>%
   spread(key = is_public, value = n, fill = 0L)
 
-pairwiseCI(cbind(public, private) ~ method,
-  data = study_table,
+study_prop_diff <-
+  pairwiseCI(cbind(public, private) ~ method,
+    data = study_table,
+    method = "Prop.diff",
+    CImethod = "NHS")
+
+rm(study_table, study_df)
   method = "Prop.diff",
   CImethod = "NHS")
 
