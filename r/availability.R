@@ -1,5 +1,7 @@
 library(tidyverse)
+import::from(broom, tidy)
 import::from(pairwiseCI, pairwiseCI)
+import::from(PropCIs, exactci)
 import::from(roomba, roomba) # devtools::install_github("ropenscilabs/roomba")
 
 theme_set(theme_grey(base_size = 7))
@@ -125,6 +127,36 @@ p_tmp <-
   coord_flip()
 
 ggsave("output/availability_by_type.pdf", p_tmp, height = 150/72, width = 300/72, unit = "in", dpi = 72)
+
+
+#-------------------------------------------------------------------------------
+# proportion and CI
+
+types_data_qual <- c("qualraw", "qualcoded", "qualcodebook", "qualcomplete")
+types_data_quan <- c("quanraw", "quanprocessed", "quancode", "quancomplete")
+types_all <- c("study",  types_data_qual, types_data_quan, "software", "hardware")
+
+public_by_type_ci <-
+  avail_by_type %>%
+  spread(key = is_public, value = n, fill = 0L) %>%
+  mutate(total = private + public) %>%
+  rowwise() %>%
+  do({
+    row_type <- .$type[[1]]
+    exactci(.$public[[1]], .$total[[1]], 0.95) %>%
+      tidy() %>%
+      mutate(type = row_type)
+  })
+
+public_by_type_ci %>%
+  mutate(type = factor(type, levels = types_all)) %>%
+  mutate(type = fct_rev(type)) %>%
+  ggplot(aes(x = type, ymin = conf.low, ymax = conf.high)) +
+  geom_errorbar(width = 0) +
+  ylim(0, 1) +
+  xlab(NULL) +
+  ylab("95% CI of the proportion of publicly available material\n (Clopper-Pearson exact CI)") +
+  coord_flip()
 
 
 #===============================================================================
