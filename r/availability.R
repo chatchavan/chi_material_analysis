@@ -4,11 +4,20 @@ import::from(pairwiseCI, pairwiseCI)
 import::from(PropCIs, exactci)
 import::from(roomba, roomba) # devtools::install_github("ropenscilabs/roomba")
 
-theme_set(theme_grey(base_size = 7))
-
 source("r/io.R")
 
+# settings
+theme_set(theme_grey(base_size = 7))
 
+# globally persisting variables
+g <- new.env()
+
+
+# material types
+g$types_data_qual <- c("qualraw", "qualcoded", "qualcodebook", "qualcomplete")
+g$types_data_quan <- c("quanraw", "quanprocessed", "quancode", "quancomplete")
+g$types_all <- c("study",  g$types_data_qual, g$types_data_quan, "software", "hardware")
+attach(g)
 
 #===============================================================================
 # load and convert data to a long format
@@ -16,7 +25,6 @@ source("r/io.R")
 #  * Export responses as: Answer code
 #  * Export questions as: Question code & question text
 df <- load_data("input/results-survey332449.csv")
-
 
 existence <-
   df %>%
@@ -79,20 +87,15 @@ df_long <-
   left_join(reason, by = c("id", "type")) %>%
   select(-is_exist)  # because of left-join, the table contains only the materials that exist
 
-rm(list = setdiff(ls(), "df_long"))
-
 
 #-------------------------------------------------------------------------------
 # determine methodology
 
-qual_signals <- c("qualraw", "qualcoded", "qualcodebook", "qualcomplete")
-quan_signals <- c("quanraw", "quanprocessed", "quancode")
-
 study_method <-
   df_long %>%
   mutate(
-    qual = (type %in% qual_signals),
-    quan = (type %in% quan_signals)
+    qual = (type %in% types_data_qual),
+    quan = (type %in% types_data_quan)
   ) %>%
   gather(key = method, value = "tf", qual, quan) %>%
   select(id, type, method, tf) %>%
@@ -104,7 +107,14 @@ df_long <-
   left_join(study_method, by = "id")
 
 
-rm(study_method, qual_signals, quan_signals)
+#===============================================================================
+# put global variables in an environment and remove reference to prevent mutation
+
+g$df_long <- df_long
+rm(list = setdiff(ls(), c("g")))
+detach(g)
+attach(g)
+rm(g)
 
 #===============================================================================
 # availability frequency and proportion for each type of materials
@@ -131,10 +141,6 @@ ggsave("output/availability_by_type.pdf", p_tmp, height = 150/72, width = 300/72
 
 #-------------------------------------------------------------------------------
 # proportion and CI
-
-types_data_qual <- c("qualraw", "qualcoded", "qualcodebook", "qualcomplete")
-types_data_quan <- c("quanraw", "quanprocessed", "quancode", "quancomplete")
-types_all <- c("study",  types_data_qual, types_data_quan, "software", "hardware")
 
 public_by_type_ci <-
   avail_by_type %>%
