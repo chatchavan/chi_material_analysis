@@ -96,4 +96,4 @@ df_long <-
   left_join(study_method, by = "id")
 
 
-rm(study_method)
+rm(study_method, qual_signals, quan_signals)
