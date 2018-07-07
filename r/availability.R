@@ -103,10 +103,8 @@ pub_data_by_method <-
   mutate(type = recode(type,
     qualraw       = "data_qual",
     qualcoded     = "data_qual",
-    qualcomplete  = "data_qual",
     quanraw       = "data_quan",
     quanprocessed = "data_quan",
-    quancomplete  = "data_quan",
     .default      = NA_character_
     )) %>%
   filter(!is.na(type)) %>%
@@ -132,9 +130,7 @@ pub_data_by_maturity <-
     qualraw       = "data_raw",
     quanraw       = "data_raw",
     qualcoded     = "data_processed",
-    qualcomplete  = "data_processed",
     quanprocessed = "data_processed",
-    quancomplete  = "data_processed",
     .default      = NA_character_
     )) %>%
   filter(!is.na(type)) %>%
