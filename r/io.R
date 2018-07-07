@@ -138,7 +138,11 @@ make_long_format <- function(df) {
     mutate(reason = str_replace(reason, "why_", "")) %>%
 
     group_by(id, type) %>%
-    summarize(reason = str_c(reason, collapse = ","))
+    summarize(reason = str_c(reason, collapse = ",")) %>%
+
+    # for "don't know" reason, remove other reasons that are checked
+    mutate(reason = if_else(str_detect(reason, "dont_know"), "dont_know", reason))
+
 
   df_long <-
     existence %>%
