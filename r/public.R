@@ -66,10 +66,11 @@ rm_all()
 acm_freq <-
   locations_long %>%
   mutate(is_acm = if_else(location %in% c("acmdl", "paper"), "acmdl", "other")) %>%
+  mutate(is_acm = factor(is_acm, levels = c("acmdl", "other"))) %>%
   select(id, type, is_acm) %>%
   group_by(type, is_acm) %>%
   summarize(n = n()) %>%
-  spread(key = is_acm, value = n, fill = 0L) %>%
+  spread(key = is_acm, value = n, fill = 0L, drop = FALSE) %>%
   ungroup() %>%
   mutate(total = acmdl + other)
 

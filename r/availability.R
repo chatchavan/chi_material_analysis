@@ -30,6 +30,7 @@ rm_all()
 avail_by_type <-
   df_long %>%
   mutate(is_public = if_else(is_public, "public", "private")) %>%
+  mutate(is_public = factor(is_public, levels = c("public", "private"))) %>%
   select(id, type, is_public) %>%
   group_by(type, is_public) %>%
   summarize(n = n()) %>%
@@ -49,7 +50,7 @@ ggsave("output/availability_by_type_count.pdf", p_tmp, height = 150/72, width = 
 
 public_by_type_ci <-
   avail_by_type %>%
-  spread(key = is_public, value = n, fill = 0L) %>%
+  spread(key = is_public, value = n, fill = 0L, drop = FALSE) %>%
   mutate(total = private + public) %>%
   rowwise() %>%
   do({
@@ -170,7 +171,7 @@ freq_table <-
     pub_product_by_type) %>%
   group_by(rq, group, is_public) %>%
   summarize(n = n()) %>%
-  spread(key = is_public, value = n, fill = 0L) %>%
+  spread(key = is_public, value = n, fill = 0L, drop = TRUE) %>%
   ungroup()
 
 

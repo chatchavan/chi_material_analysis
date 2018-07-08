@@ -57,6 +57,7 @@ rm_all()
 relevance_by_type <-
   df_private %>%
   mutate(is_claim_related = if_else(is_claim_related, "related", "unrelated")) %>%
+  mutate(is_claim_related = factor(is_claim_related, levels = c("related", "unrelated"))) %>%
   select(id, type, is_claim_related) %>%
   group_by(type, is_claim_related) %>%
   summarize(n = n()) %>%
@@ -77,7 +78,7 @@ ggsave("output/private_relevance_by_type.pdf", p_tmp, height = 150/72, width = 3
 
 relevance_by_type_ci <-
   relevance_by_type %>%
-  spread(key = is_claim_related, value = n, fill = 0L) %>%
+  spread(key = is_claim_related, value = n, fill = 0L, drop = FALSE) %>%
   mutate(total = related + unrelated) %>%
   rowwise() %>%
   do({
@@ -135,10 +136,11 @@ rm_all()
 dontknow_freq <-
   reasons_long %>%
   mutate(is_dontknow = if_else(reason == "dont_know", "dont_know", "other")) %>%
+  mutate(is_dontknow = factor(is_dontknow, levels = c("dont_know", "other"))) %>%
   select(id, type, is_dontknow) %>%
   group_by(type, is_dontknow) %>%
   summarize(n = n()) %>%
-  spread(key = is_dontknow, value = n, fill = 0L) %>%
+  spread(key = is_dontknow, value = n, fill = 0L, drop = FALSE) %>%
   ungroup() %>%
   mutate(total = dont_know + other)
 
