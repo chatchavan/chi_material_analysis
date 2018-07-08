@@ -17,3 +17,12 @@ persist(should_exclude_mismatch)
 
 limesurvey_export_path <- "input/results-survey673185.csv"
 persist(limesurvey_export_path)
+
+
+# plot settings
+
+theme_set(theme_grey(base_size = 7))
+
+# ensure that all material types are shown
+scale_x_material_type <- scale_x_discrete(drop = FALSE, limits = types_all)
+persist(scale_x_material_type)

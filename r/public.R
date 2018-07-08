@@ -7,10 +7,6 @@ import::from(PropCIs, exactci)
 source("r/constants.R")
 source("r/io.R")
 
-# settings
-theme_set(theme_grey(base_size = 7))
-
-
 #===============================================================================
 # load and convert data to a long format
 df_public <-
@@ -39,6 +35,7 @@ p_tmp <-
   freq_locations %>%
   ggplot(aes(x = type, y = n, fill = location)) +
   geom_col() +
+  scale_x_material_type +
   xlab(NULL) +
   coord_flip() +
   ggtitle("RQ 3")
@@ -83,12 +80,12 @@ acm_by_type_ci <-
   })
 
 
+
 p_tmp <-
   acm_by_type_ci %>%
-  mutate(type = factor(type, levels = types_all)) %>%
-  mutate(type = fct_rev(type)) %>%
   ggplot(aes(x = type, ymin = conf.low, ymax = conf.high)) +
   geom_errorbar(width = 0) +
+  scale_x_material_type +
   ylim(0, 1) +
   xlab(NULL) +
   ylab("95% CI of the proportion of materials on ACM DL (in paper or as supplement materials) to the all public materials\n (Clopper-Pearson exact CI)") +

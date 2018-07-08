@@ -7,9 +7,6 @@ import::from(PropCIs, exactci)
 source("r/constants.R")
 source("r/io.R")
 
-# settings
-theme_set(theme_grey(base_size = 7))
-
 
 #===============================================================================
 # load and convert data to a long format
@@ -39,6 +36,7 @@ p_tmp <-
   freq_reasons %>%
   ggplot(aes(x = type, y = n, fill = reason)) +
   geom_col() +
+  scale_x_material_type +
   xlab(NULL) +
   coord_flip() +
   ggtitle("RQ 2")
@@ -65,6 +63,7 @@ p_tmp <-
   relevance_by_type %>%
   ggplot(aes(x = type, y = n, fill = is_claim_related)) +
   geom_col() +
+  scale_x_material_type +
   coord_flip() +
   ggtitle("RQ 2.1")
 
@@ -88,10 +87,9 @@ relevance_by_type_ci <-
 
 p_tmp <-
   relevance_by_type_ci %>%
-  mutate(type = factor(type, levels = types_all)) %>%
-  mutate(type = fct_rev(type)) %>%
   ggplot(aes(x = type, ymin = conf.low, ymax = conf.high)) +
   geom_errorbar(width = 0) +
+  scale_x_material_type +
   ylim(0, 1) +
   xlab(NULL) +
   ylab("95% CI of the proportion of claim-related private materials to all private materials\n (Clopper-Pearson exact CI)") +
@@ -155,10 +153,9 @@ dontknow_by_type_ci <-
 
 p_tmp <-
   dontknow_by_type_ci %>%
-  mutate(type = factor(type, levels = types_all)) %>%
-  mutate(type = fct_rev(type)) %>%
   ggplot(aes(x = type, ymin = conf.low, ymax = conf.high)) +
   geom_errorbar(width = 0) +
+  scale_x_material_type +
   ylim(0, 1) +
   xlab(NULL) +
   ylab("95% CI of the proportion of private materials that were stated as unknown to the all private materials\n (Clopper-Pearson exact CI)") +
