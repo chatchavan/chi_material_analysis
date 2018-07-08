@@ -1,9 +1,7 @@
 library(tidyverse)
 library(cleanslate) # devtools::install_github("chatchavan/cleanslate@v0.1.0")
 import::from(broom, tidy)
-import::from(pairwiseCI, pairwiseCI)
 import::from(PropCIs, exactci)
-import::from(roomba, roomba) # devtools::install_github("ropenscilabs/roomba")
 
 
 source("r/constants.R")

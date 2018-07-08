@@ -3,7 +3,6 @@ library(cleanslate) # devtools::install_github("chatchavan/cleanslate@v0.1.0")
 import::from(broom, tidy)
 import::from(pairwiseCI, pairwiseCI)
 import::from(PropCIs, exactci)
-import::from(roomba, roomba) # devtools::install_github("ropenscilabs/roomba")
 
 
 source("r/constants.R")
@@ -200,9 +199,18 @@ pw_results <-
   method = "Prop.diff",
   CImethod = "NHS")
 
-comp_table <-
-  roomba(pw_results$byout, c("estimate", "lower", "upper", "compnames", "method")) %>%
-  bind_cols(list(RQ = pw_results$bynames), .)
+comp_table_parts <- list()
+for (rq in pw_results$bynames) {
+  result_rq <- pw_results$byout[[rq]]
+  comp_table_parts[[rq]] <- tibble(
+    rq = rq,
+    compnames = result_rq$compnames,
+    estimate = result_rq$estimate,
+    lower = result_rq$lower,
+    upper = result_rq$upper,
+    method = result_rq$method)
+}
+comp_table <- bind_rows(comp_table_parts)
 
 p_tmp <-
   comp_table %>%
