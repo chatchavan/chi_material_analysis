@@ -14,3 +14,6 @@ persist(types_all)
 
 should_exclude_mismatch <- TRUE
 persist(should_exclude_mismatch)
+
+limesurvey_export_path <- "input/results-survey673185.csv"
+persist(limesurvey_export_path)

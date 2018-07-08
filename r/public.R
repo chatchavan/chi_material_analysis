@@ -14,7 +14,7 @@ theme_set(theme_grey(base_size = 7))
 #===============================================================================
 # load and convert data to a long format
 df_public <-
-  load_data("input/results-survey332449.csv") %>%
+  load_data(limesurvey_export_path) %>%
   filter(is_public)
 
 persist(df_public)

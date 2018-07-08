@@ -14,7 +14,7 @@ theme_set(theme_grey(base_size = 7))
 
 #===============================================================================
 # load and convert data to a long format
-df_long <- load_data("input/results-survey332449.csv")
+df_long <- load_data(limesurvey_export_path)
 
 persist(df_long)
 rm_all()
