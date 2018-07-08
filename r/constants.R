@@ -24,5 +24,5 @@ persist(limesurvey_export_path)
 theme_set(theme_grey(base_size = 7))
 
 # ensure that all material types are shown
-scale_x_material_type <- scale_x_discrete(drop = FALSE, limits = types_all)
+scale_x_material_type <- scale_x_discrete(drop = FALSE, limits = rev(types_all))
 persist(scale_x_material_type)

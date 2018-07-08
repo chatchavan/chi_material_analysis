@@ -121,7 +121,7 @@ p_tmp <-
   coord_flip() +
   ggtitle("RQ 2.2")
 
-ggsave("output/private_reason_by_method.pdf", p_tmp, height = 300/72, width = 300/72, unit = "in", dpi = 72)
+ggsave("output/private_reason_by_method.pdf", p_tmp, height = 150/72, width = 300/72, unit = "in", dpi = 72)
 
 rm_all()
 
@@ -158,7 +158,7 @@ p_tmp <-
   scale_x_material_type +
   ylim(0, 1) +
   xlab(NULL) +
-  ylab("95% CI of the proportion of private materials that were stated as unknown to the all private materials\n (Clopper-Pearson exact CI)") +
+  ylab("95% CI of the proportion of private materials that were stated as unknown\n to the all private materials (Clopper-Pearson exact CI)") +
   coord_flip() +
   ggtitle("RQ 2.3")
 

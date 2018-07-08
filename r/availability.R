@@ -37,7 +37,8 @@ p_tmp <-
   ggplot(aes(x = type, y = n, fill = is_public)) +
   scale_x_material_type +
   geom_col() +
-  coord_flip()
+  coord_flip() +
+  ggtitle("RQ 1")
 
 ggsave("output/availability_by_type_count.pdf", p_tmp, height = 150/72, width = 300/72, unit = "in", dpi = 72)
 
@@ -65,7 +66,8 @@ p_tmp <-
   ylim(0, 1) +
   xlab(NULL) +
   ylab("95% CI of the proportion of publicly available material\n (Clopper-Pearson exact CI)") +
-  coord_flip()
+  coord_flip() +
+  ggtitle("RQ 1")
 
 ggsave("output/availability_by_type_proportion.pdf", p_tmp, height = 150/72, width = 300/72, unit = "in", dpi = 72)
 
@@ -88,7 +90,7 @@ pub_study_by_method <-
   # rename for the RQ table
   mutate(is_public = if_else(is_public, "public", "private")) %>%
   rename(group = method) %>%
-  mutate(rq = "1.1")
+  mutate(rq = "RQ 1.1")
 
 
 # RQ 1.2: Is there a difference in the availability of data for quantitative and
@@ -115,7 +117,7 @@ pub_data_by_method <-
   # relabel and rename for the RQ table
   mutate(is_public = if_else(is_public, "public", "private")) %>%
   rename(group = type) %>%
-  mutate(rq = "1.2")
+  mutate(rq = "RQ 1.2")
 
 
 # RQ 1.3: Is preprocessed data more frequently available than raw data?
@@ -141,7 +143,7 @@ pub_data_by_maturity <-
   # relabel and rename for the RQ table
   mutate(is_public = if_else(is_public, "public", "private")) %>%
   rename(group = type) %>%
-  mutate(rq = "1.3")
+  mutate(rq = "RQ 1.3")
 
 
 # RQ 1.4: Is software source code more frequently available than hardware specifications?
@@ -153,7 +155,7 @@ pub_product_by_type <-
   # relabel and rename for the RQ table
   mutate(is_public = if_else(is_public, "public", "private")) %>%
   rename(group = type) %>%
-  mutate(rq = "1.4")
+  mutate(rq = "RQ 1.4")
 
 
 #===============================================================================
@@ -181,7 +183,8 @@ p_tmp <-
   ggplot(aes(x = group, y = n, fill = availability)) +
   geom_col() +
   coord_flip() +
-  facet_grid(rq ~ ., scales = "free_y")
+  facet_grid(rq ~ ., scales = "free_y") +
+  ggtitle("RQ 1.1 - 1.4")
 
 ggsave("output/availability_pairs_frequency.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
 
@@ -215,7 +218,8 @@ p_tmp <-
   geom_pointrange() +
   coord_flip() +
   xlab(NULL) +
-  ylab("Difference of proportion of publicly available materials\n95% CI (Newcombes Hybrid Score)")
+  ylab("Difference of proportion of publicly available materials\n95% CI (Newcombes Hybrid Score)") +
+  ggtitle("RQ 1.1 - 1.4")
 
 ggsave("output/availability_pairs_proportion_difference.pdf", p_tmp, height = 150/72, width = 300/72, unit = "in", dpi = 72)
 

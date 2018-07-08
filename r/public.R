@@ -88,9 +88,9 @@ p_tmp <-
   scale_x_material_type +
   ylim(0, 1) +
   xlab(NULL) +
-  ylab("95% CI of the proportion of materials on ACM DL (in paper or as supplement materials) to the all public materials\n (Clopper-Pearson exact CI)") +
+  ylab("95% CI of the proportion of materials on ACM DL (in paper or as supplement materials)\n to the all public materials (Clopper-Pearson exact CI)") +
   coord_flip() +
-  ggtitle("RQ 2.3")
+  ggtitle("RQ 3.2")
 
 ggsave("output/public_acm_proportion.pdf", p_tmp, height = 150/72, width = 300/72, unit = "in", dpi = 72)
 
