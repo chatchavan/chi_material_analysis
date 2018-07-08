@@ -11,7 +11,7 @@ source("r/io.R")
 #===============================================================================
 # load and convert data to a long format
 df_private <-
-  load_data(limesurvey_export_path) %>%
+  load_data(limesurvey_export_path, should_exclude_mismatch) %>%
   filter(!is_public)
 
 persist(df_private)

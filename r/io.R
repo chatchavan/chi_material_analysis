@@ -6,7 +6,7 @@ source("r/constants.R")
 #  * Export responses as: Answer code
 #  * Export questions as: Question code & question text
 # load and translate data
-load_data <- function(path, exclude_mismatch = should_exclude_mismatch) {
+load_data <- function(path, exclude_mismatch = FALSE) {
   df <-
     read_delim(path, ";", col_types = cols(.default = col_character()))  %>%
     lookup_col_names()

@@ -11,7 +11,7 @@ source("r/io.R")
 
 #===============================================================================
 # load and convert data to a long format
-df_long <- load_data(limesurvey_export_path)
+df_long <- load_data(limesurvey_export_path, should_exclude_mismatch)
 
 persist(df_long)
 rm_all()

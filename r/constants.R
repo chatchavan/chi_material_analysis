@@ -10,10 +10,7 @@ persist(types_data_quan)
 persist(types_all)
 
 
-# overall analysis flag
-
-should_exclude_mismatch <- TRUE
-persist(should_exclude_mismatch)
+# overall analysis settings
 
 limesurvey_export_path <- "input/results-survey673185.csv"
 persist(limesurvey_export_path)
