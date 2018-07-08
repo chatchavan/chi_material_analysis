@@ -220,6 +220,6 @@ p_tmp <-
   xlab(NULL) +
   ylab("Difference of proportion of publicly available materials\n95% CI (Newcombes Hybrid Score)")
 
-ggsave("output/availability_pairs_proportion_difference.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
+ggsave("output/availability_pairs_proportion_difference.pdf", p_tmp, height = 150/72, width = 300/72, unit = "in", dpi = 72)
 
 rm_all()
