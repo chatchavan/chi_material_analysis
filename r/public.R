@@ -38,7 +38,8 @@ p_tmp <-
   scale_x_material_type +
   xlab(NULL) +
   coord_flip() +
-  ggtitle("RQ 3")
+  ggtitle("RQ 3") +
+  guides(fill = guide_legend(keywidth = 0.5, keyheight = 0.5))
 
 ggsave("output/public_location_by_type.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
 

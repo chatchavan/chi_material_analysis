@@ -38,7 +38,9 @@ p_tmp <-
   scale_x_material_type +
   geom_col() +
   coord_flip() +
-  ggtitle("RQ 1")
+  ggtitle("RQ 1") +
+  guides(fill = guide_legend(keywidth = 0.5, keyheight = 0.5)) +
+  theme(legend.position = "bottom")
 
 ggsave("output/availability_by_type_count.pdf", p_tmp, height = 150/72, width = 300/72, unit = "in", dpi = 72)
 
@@ -184,7 +186,9 @@ p_tmp <-
   geom_col() +
   coord_flip() +
   facet_grid(rq ~ ., scales = "free_y") +
-  ggtitle("RQ 1.1 - 1.4")
+  ggtitle("RQ 1.1 - 1.4") +
+  guides(fill = guide_legend(keywidth = 0.5, keyheight = 0.5)) +
+  theme(legend.position = "bottom")
 
 ggsave("output/availability_pairs_frequency.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
 

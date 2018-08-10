@@ -39,6 +39,7 @@ p_tmp <-
   scale_x_material_type +
   xlab(NULL) +
   coord_flip() +
+  guides(fill = guide_legend(ncol = 1, keywidth = 0.5, keyheight = 0.5)) +
   ggtitle("RQ 2")
 
 ggsave("output/private_reason_by_type.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
@@ -65,7 +66,9 @@ p_tmp <-
   geom_col() +
   scale_x_material_type +
   coord_flip() +
-  ggtitle("RQ 2.1")
+  ggtitle("RQ 2.1") +
+  guides(fill = guide_legend(keywidth = 0.5, keyheight = 0.5)) +
+  theme(legend.position = "bottom")
 
 ggsave("output/private_relevance_by_type.pdf", p_tmp, height = 150/72, width = 300/72, unit = "in", dpi = 72)
 
@@ -119,9 +122,11 @@ p_tmp <-
   geom_col(position = "dodge") +
   facet_grid(type ~ .) +
   coord_flip() +
-  ggtitle("RQ 2.2")
+  ggtitle("RQ 2.2") +
+  guides(fill = guide_legend(keywidth = 0.5, keyheight = 0.5)) +
+  theme(legend.position = "bottom")
 
-ggsave("output/private_reason_by_method.pdf", p_tmp, height = 150/72, width = 300/72, unit = "in", dpi = 72)
+ggsave("output/private_reason_by_method.pdf", p_tmp, height = 300/72, width = 300/72, unit = "in", dpi = 72)
 
 rm_all()
 
