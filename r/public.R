@@ -36,6 +36,7 @@ p_tmp <-
   ggplot(aes(x = type, y = n, fill = location)) +
   geom_col() +
   scale_x_material_type +
+  scale_fill_20 +
   xlab(NULL) +
   coord_flip() +
   ggtitle("RQ 3") +

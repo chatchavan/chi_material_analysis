@@ -37,6 +37,7 @@ p_tmp <-
   ggplot(aes(x = type, y = n, fill = reason)) +
   geom_col() +
   scale_x_material_type +
+  scale_fill_20 +
   xlab(NULL) +
   coord_flip() +
   guides(fill = guide_legend(ncol = 1, keywidth = 0.5, keyheight = 0.5)) +
