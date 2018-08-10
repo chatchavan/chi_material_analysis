@@ -16,7 +16,7 @@ dir.create("output/all_data", recursive = TRUE, showWarnings = FALSE)
 dir.create("output/exclude_expertise_mismatch", recursive = TRUE, showWarnings = FALSE)
 
 # analysis without respondents whose expertise mismatch the material types
-should_exclude_mismatch <- TRUE
+should_exclude_mismatch <- FALSE
 persist(should_exclude_mismatch)
 all_analysis()
 output_pdf <- list.files("output", "*.pdf")
@@ -25,7 +25,7 @@ file.rename(file.path("output", output_pdf), target_path)
 
 
 # analysis of all data
-should_exclude_mismatch <- FALSE
+should_exclude_mismatch <- TRUE
 persist(should_exclude_mismatch)
 all_analysis()
 output_pdf <- list.files("output", "*.pdf")
