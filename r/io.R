@@ -1,6 +1,12 @@
 library(tidyverse)
 source("r/constants.R")
 
+
+
+load_raw <- function(path) {
+  read_delim(path, ";", col_types = cols(.default = col_character()))
+}
+
 # NOTE: Expected export parameters from LimeSurvey
 #  * Completion state: Completed responses only
 #  * Export responses as: Answer code
@@ -8,7 +14,7 @@ source("r/constants.R")
 # load and translate data
 load_data <- function(path, exclude_mismatch = FALSE) {
   df <-
-    read_delim(path, ";", col_types = cols(.default = col_character()))  %>%
+    load_raw(path)  %>%
     lookup_col_names()
 
   df_materials <-
@@ -74,15 +80,23 @@ make_blank_lut <- function(df) {
 }
 
 # translate LimeSurvey column name to readable names
-lookup_col_names <- function(df) {
+lookup_col_names <- function(df, omit_free_text = TRUE) {
   lut_df <- read_csv("input/col_lut.csv", col_types = "cc")
-  df %>%
+  result <-
+    df %>%
     rename_all(funs(
       str_sub(
         str_extract(., "(^.+?)\\. "), end = -3)
       )
-      ) %>%
-    select_at(vars(lut_df$col_name_lime), ~ lut_df$col_name)
+      )
+
+  if (omit_free_text) {
+    result <-
+      result %>%
+      select_at(vars(lut_df$col_name_lime), ~ lut_df$col_name)
+  }
+
+  result
 }
 
 
