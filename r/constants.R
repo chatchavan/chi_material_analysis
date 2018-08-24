@@ -12,8 +12,11 @@ persist(types_all)
 
 # overall analysis settings
 
-limesurvey_export_path <- "input/results-survey673185.csv"
+limesurvey_export_path <- "input/results-survey.csv"
 persist(limesurvey_export_path)
+
+postsurvey_export_path <- "input/results-post-survey.csv"
+persist(postsurvey_export_path)
 
 
 # plot settings
