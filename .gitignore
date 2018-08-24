@@ -7,3 +7,5 @@
 .RData
 *.nb.html
 
+input/results-post-survey.csv
+input/results-survey.csv
