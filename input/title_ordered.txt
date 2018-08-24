@@ -1,0 +1,665 @@
+Breaking! A Typology of Security and Privacy News and How It's Shared
+Deep Thermal Imaging: Proximate Material Type Recognition in the Wild through Deep Learning of Spatial Surface Temperature Patterns
+All Work and No Play? Conversations with a Question-and-Answer Chatbot in the Wild
+Designing the Desirable Smart Home: A Study of Household&nbsp;Experiences and Energy Consumption Impacts
+The Making of Performativity in Designing [with] Smart Material Composites
+Patterns for How Users Overcome Obstacles in Voice User Interfaces
+ThinkActive: Designing for Pseudonymous Activity Tracking in the Classroom
+Gender Recognition or Gender Reductionism? The Social Implications of Automatic Gender Recognition Systems
+CivilServant: Community-Led Experiments in Platform Governance
+M-Kulinda: Using a Sensor-Based Technology Probe to Explore Domestic Security in Rural Kenya
+Nonvisual Interaction Techniques at the Keyboard Surface
+Admixed Portrait: Design to Understand Facebook Portrayals in New Parenthood
+MABLE: Mediating Young Children's Smart Media Usage with Augmented Reality
+How Relevant are Incidental Power Poses for HCI?
+Designing and Evaluating mHealth Interventions for Vulnerable Populations: A Systematic Review
+The Illusion of Control: Placebo Effects of Control Settings
+Easy Return: An App for Indoor Backtracking Assistance
+Point-and-Shake: Selecting from Levitating Object Displays
+When David Meets Goliath: Combining Smartwatches with a Large Vertical Display for Visual Data Exploration
+SteeringWheel: A Locality-Preserving Magnification Interface for Low Vision Web Browsing
+Extending Keyboard Shortcuts with Arm and Wrist Rotation Gestures
+IntroAssist: A Tool to Support Writing Introductory Help Requests
+Surprise Me If You Can: Serendipity in Health Information
+Awe the Audience: How the Narrative Trajectories Affect Audience Perception in Public Speaking
+Introducing Transient Gestures to Improve Pan and Zoom on Touch Surfaces
+MirrorMirror: A Mobile Application to Improve Speechreading Acquisition
+Hybrid-Brailler: Combining Physical and Gestural Interaction for Mobile Braille Input and Editing
+Flexible and Mindful Self-Tracking: Design Implications from Paper Bullet Journals
+Predicting Human Performance in Vertical Menu Selection Using Deep Learning
+Customizing Hybrid Products
+Fingers' Range and Comfortable Area for One-Handed Smartphone Interaction Beyond the Touchscreen
+Exploration and Explanation in Computational Notebooks
+Multi-Touch Skin: A Thin and Flexible Multi-Touch Sensor for On-Skin Input
+Improving Comprehension of Measurements Using Concrete Re-expression Strategies
+Understanding the Needs of Searchers with Dyslexia
+Evaluation Strategies for HCI Toolkit Research
+TopoText: Context-Preserving Text Data Exploration Across Multiple Spatial Scales
+Design Patterns for Data Comics
+Practices and Technology Needs of a Network of Farmers in Tharaka Nithi, Kenya
+Design for Collaborative Survival: An Inquiry into Human-Fungi Relationships
+“An Odd Kind of Pleasure”: Differentiating Emotional Challenge in Digital Games
+Eyes-Free Target Acquisition in Interaction Space around the Body for Virtual Reality
+Change Blindness in Proximity-Aware Mobile Interfaces
+Rethinking Thinking Aloud: A Comparison of Three Think-Aloud Protocols
+Reading on Smart Glasses: The Effect of Text Position, Presentation Type and Walking
+Mini-Me: An Adaptive Avatar for Mixed Reality Remote Collaboration
+Viewer Experience of Obscuring Scene Elements in Photos to Enhance Privacy
+Navigating the Job Search as a Low-Resourced Job Seeker
+The Value of Empty Space for Design
+Disorder or Driver?: The Effects of Nomophobia on Work-Related Outcomes in Organizations
+My Telepresence, My Culture?: An Intercultural Investigation of Telepresence Robot Operators' Interpersonal Distance Behaviors
+Privacy Lies: Understanding How, When, and Why People Lie to Protect Their Privacy in Multiple Online Contexts
+"We Are the Product": Public Reactions to Online Data Sharing and Privacy Controversies in the Media
+FaceDisplay: Towards Asymmetric Multi-User Interaction for Nomadic Virtual Reality
+Interactive Guidance Techniques for Improving Creative Feedback
+Environmental Factors in Indoor Navigation Based on Real-World Trajectories of Blind Users
+BSpeak: An Accessible Voice-based Crowdsourcing Marketplace for Low-Income Blind People
+Understanding Chatbot-mediated Task Management
+Rich Representations of Visual Content for Screen Reader Users
+Let's Hate Together: How People Share News in Messaging, Social, and Public Networks
+Reinterpreting Schlemmer's Triadic Ballet: Interactive Costume for Unthinkable Movements
+Exploring the Potential of Exergames to affect the Social and Daily Life of People with Dementia and their Caregivers
+Grafter: Remixing 3D-Printed Machines
+Depth Conflict Reduction for Stereo VR Video Interfaces
+From Pulse Trains to "Coloring with Vibrations": Motion Mappings for Mid-Air Haptic Textures
+Collaborative Dynamic Queries: Supporting Distributed Small Group Decision-making
+Crowdsourcing Rural Network Maintenance and Repair via Network Messaging
+Interactive Interior and Proxemics Thresholds: Empowering Participants in Sensitive Conversations
+Blocks4All: Overcoming Accessibility Barriers to Blocks Programming for Children with Visual Impairments
+What's at Stake: Characterizing Risk Perceptions of Emerging Technologies
+TaskCam: Designing and Testing an Open Tool for Cultural Probes Studies
+Making Problems in Design Research: The Case of Teen Shoplifters on Tumblr
+Group vs Individual: Impact of TOUCH and TILT Cross-Device Interactions on Mixed-Focus Collaboration
+Back to Analogue: Self-Reporting for Parkinson's Disease
+The Hide and Seek of Workspace: Towards Human-Centric Sustainable Architecture
+How Teens with Visual Impairments Take, Edit, and Share Photos on Social Media
+Attending to Slowness and Temporality with Olly and Slow Game: A Design Inquiry Into Supporting Longer-Term Relations with Everyday Computational Objects
+VirtualGrasp: Leveraging Experience of Interacting with Physical Objects to Facilitate Digital Object Retrieval
+Harvesting Caregiving Knowledge: Design Considerations for Integrating Volunteer Input in Dementia Care
+Gamification for Self-Tracking: From World of Warcraft to the Design of Personal Informatics Systems
+Pinpointing: Precise Head- and Eye-Based Target Selection for Augmented Reality
+Sketch&amp;Stitch: Interactive Embroidery for E-textiles
+Using Stakeholder Theory to Examine Drivers' Stake in Uber
+Conversations in the Eye of the Storm: At-Scale Features of Conversational Structure in a High-Tempo, High-Stakes Microblogging Environment
+Interactive Extraction of Examples from Existing Code
+Haptic Revolver: Touch, Shear, Texture, and Shape Rendering on a Reconfigurable Virtual Reality Controller
+Influences of Human Cognition and Visual Behavior on Password Strength during Picture Password Composition
+Supporting Workplace Detachment and Reattachment with Conversational Intelligence
+iTurk: Turning Passive Haptics into Active Haptics by Making Users Reconfigure Props in Virtual Reality
+Clusters, Trends, and Outliers: How Immersive Technologies Can Facilitate the Collaborative Analysis of Multidimensional Data
+Methods for Evaluation of Imperfect Captioning Tools by Deaf or Hard-of-Hearing Users at Different Reading Literacy Levels
+Effects of Individual Differences in Blocking Workplace Distractions
+Dynamic Demographics: Lessons from a Large-Scale Census of Performative Possibilities in Games
+Philosophers Living with the Tilting Bowl
+LumiWatch: On-Arm Projected Graphics and Touch Input
+Hit-or-Wait: Coordinating Opportunistic Low-effort Contributions to Achieve Global Outcomes in On-the-go Crowdsourcing
+An Empirical Exploration of Mindfulness Design Using Solo Travel Domain
+Inspiring AWE: Transforming Clinic Waiting Rooms into Informal Learning Environments with Active Waiting Education
+Object Manipulation in Virtual Reality Under Increasing Levels of Translational Gain
+Watch Me Play: Does Social Facilitation Apply to Digital Games?
+Do You Think What I Think: Perceptions of Delayed Instant Messages in Computer-Mediated Communication of Romantic Relations
+From Research to Practice: Informing the Design of Autism Support Smart Technology
+Explanations as Mechanisms for Supporting Algorithmic Transparency
+On the Design of OLO Radio: Investigating Metadata as a Design Material
+Engage Early, Correct More: How Journalists Participate in False Rumors Online during Crisis Events
+Measuring the “Why” of Interaction: Development and Validation of the User Motivation Inventory (UMI)
+GestureWiz: A Human-Powered Gesture Design Environment for User Interface Prototypes
+In Search of the Dream Team: Temporally Constrained Multi-Armed Bandits for Identifying Effective Team Structures
+Troubling Vulnerability: Designing with LGBT Young People's Ambivalence Towards Hate Crime Reporting
+PHUI-kit: Interface Layout and Fabrication on Curved 3D Printed Objects
+Crowd-Guided Ensembles: How Can We Choreograph Crowd Workers for Video Segmentation?
+Phone vs. Tangible in Museums: A Comparative Study
+Evaluating User Satisfaction with Typography Designs via Mining Touch Interaction Data in Mobile Reading
+Keeping a Low Profile?: Technology, Risk and Privacy among Undocumented Immigrants
+Comparing Computer-Based Drawing Methods for Blind People with Real-Time Tactile Feedback
+Enabling People with Visual Impairments to Navigate Virtual Reality with a Haptic and Auditory Cane Simulation
+Pulp Nonfiction: Low-Cost Touch Tracking for Paper
+Exploring New Metaphors for a Networked World through the File Biography
+Understanding Older Users' Acceptance of Wearable Interfaces for Sensor-based Fall Risk Assessment
+How People Form Folk Theories of Social Media Feeds and What it Means for How We Study Self-Presentation
+Analogy Mining for Specific Design Needs
+Measuring Employment Demand Using Internet Search Data
+Data Illustrator: Augmenting Vector Design Tools with Lazy Data Binding for Expressive Visualization Authoring
+Safety vs. Surveillance: What Children Have to Say about Mobile Apps for Parental Control
+Co-performance: Conceptualizing the Role of Artificial Agency in the Design of Everyday Life
+Social Influence and Reciprocity in Online Gift Giving
+Time for Break: Understanding Information Workers' Sedentary Behavior Through a Break Prompting System
+Breaking the Tracking: Enabling Weight Perception using Perceivable Tracking Offsets
+Remixed Reality: Manipulating Space and Time in Augmented Reality
+Mapping Machine Learning Advances from HCI Research to Reveal Starting Places for Design Innovation
+Pentelligence: Combining Pen Tip Motion and Writing Sounds for Handwritten Digit Recognition
+Exploring Multimodal Watch-back Tactile Display using Wind and Vibration
+eKichabi: Information Access through Basic Mobile Phones in Rural Tanzania
+Understanding Identity Presentation in Medical Crowdfunding
+Pocket Transfers: Interaction Techniques for Transferring Content from Situated Displays to Mobile Devices
+Understanding the Family Perspective on the Storage, Sharing and Handling of Family Civic Data
+The Effects of Adding Search Functionality to Interactive Visualizations on the Web
+Towards Design Principles for Visual Analytics in Operations Contexts
+Displaying Invisible Objects: Why People Rarely Re-read E-books
+A Visual Interaction Cue Framework from Video Game Environments for Augmented Reality
+HARK No More: On the Preregistration of CHI Experiments
+Designing Coherent Gesture Sets for Multi-scale Navigation on Tabletops
+HindSight: Enhancing Spatial Awareness by Sonifying Detected Objects in Real-Time 360-Degree Video
+Uncertainty Displays Using Quantile Dotplots or CDFs Improve Transit Decision-Making
+What to Put on the User: Sensing Technologies for Studies and Physiology Aware Systems
+Lost in Migration: Information Management and Community Building in an Online Health Community
+On Visual Granularity: Collocated Sales Meeting Interactions in the Machine Industry
+Distance and Attraction: Gravity Models for Geographic Content Production
+MatchSticks: Woodworking through Improvisational Digital Fabrication
+Visuo-Haptic Illusions for Improving the Perceived Performance of Shape Displays
+A Schnittmuster for Crafting Context-Sensitive Toolkits
+Repurposing Emoji for Personalised Communication: Why 🍕 means “I love you”
+More Stars or More Reviews? Differential Effects of Reputation on Trust in the Sharing Economy
+Self-Reflection and Personal Physicalization Construction
+G2G: The Design and Evaluation of a Shared Calendar and Messaging System for Grandparents and Grandchildren
+Playing Close to Home: Interaction and Emerging Play in Outdoor Play Installations
+CFar: A Tool to Increase Communication, Productivity, and Review Quality in Collaborative Code Reviews
+Announcing Pregnancy Loss on Facebook: A Decision-Making Framework for Stigmatized Disclosures on Identified Social Network Sites
+Conceptualizing Disagreement in Qualitative Coding
+Intermodulation: Improvisation and Collaborative Art Practice for HCI
+OptiMo: Optimization-Guided Motion Editing for Keyframe Character Animation
+Medley: A Library of Embeddables to Explore Rich Material Properties for 3D Printed Objects
+GeoCoin: Supporting Ideation and Collaborative Design with Smart Contracts
+Evaluating Attack and Defense Strategies for Smartphone PIN Shoulder Surfing
+VR-OOM: Virtual Reality On-rOad driving siMulation
+KickAR: Exploring Game Balancing Through Boosts and Handicaps in Augmented Reality Table Football
+Digital Joinery For Hybrid Carpentry
+What Makes an Automated Vehicle a Good Driver? Exploring lane change announcements in dense traffic situations.
+Feel My Pain: Design and Evaluation of Painpad, a Tangible Device for Supporting Inpatient Self-Logging of Pain
+Challenges and Opportunities for Technology-Supported Activity Reporting in the Workplace
+Supporting Meaningful Personal Fitness: the Tracker Goal Evolution Model
+Everybody's Hacking: Participation and the Mainstreaming of Hackathons
+Pointing at a Distance with Everyday Smart Devices
+The Story in the Notebook: Exploratory Data Science using a Literate Programming Tool
+What Did I Really Vote For? On the Usability of Verifiable E-Voting Schemes
+Tangible Drops: A Visio-Tactile Display Using Actuated Liquid-Metal Droplets
+FingerT9: Leveraging Thumb-to-finger Interaction for Same-side-hand Text Entry on Smartwatches
+Time-Turner: Designing for Reflection and Remembrance of Moments in the Home
+Webcam Covering as Planned Behavior
+WrisText: One-handed Text Entry on Smartwatch using Wrist Gestures
+Off-Line Sensing: Memorizing Interactions in Passive 3D-Printed Objects
+Social Computing-Driven Activism in Youth Empowerment Organizations: Challenges and Opportunities
+AdaM: Adapting Multi-User Interfaces for Collaborative Environments in Real-Time
+SymbiosisSketch: Combining 2D &amp; 3D Sketching for Designing Detailed 3D Objects in Situ
+Video Game Selection Procedures For Experimental Research
+Animated Edge Textures in Node-Link Diagrams: a Design Space and Initial Evaluation
+Silicone Devices: A Scalable DIY Approach for Fabricating Self-Contained Multi-Layered Soft Circuits using Microfluidics
+RFIBricks: Interactive Building Blocks Based on RFID
+Let Me Be Implicit: Using Motive Disposition Theory to Predict and Explain Behaviour in Digital Games
+Single or Multiple Conversational Agents?: An Interactional Coherence Comparison
+Understanding the Use and Impact of the Zero-Rated Free Basics Platform in South Africa
+Cooperating to Compete: the Mutuality of Cooperation and Competition in Boardgame Play
+A Matter of Control or Safety?: Examining Parental Use of Technical Monitoring Apps on Teens' Mobile Devices
+CommunityCrit: Inviting the Public to Improve and Evaluate Urban Design Ideas through Micro-Activities
+The Perils of Confounding Factors: How Fitts' Law Experiments can Lead to False Conclusions
+Utilizing Narrative Grounding to Design Storytelling Games for Creative Foreign Language Production
+Accessible Maps for the Blind: Comparing 3D Printed Models with Tactile Graphics
+Reactile: Programming Swarm User Interfaces through Direct Physical Manipulation
+Increasing User Attention with a Comic-based Policy
+Deployments of the table-non-table: A Reflection on the Relation Between Theory and Things in the Practice of Design Research
+Investigating How Smartphone Movement is Affected by Body Posture
+<i>"I can do everything but see!" </i> -- How People with Vision Impairments Negotiate their Abilities in Social Contexts
+vrSocial: Toward Immersive Therapeutic VR Systems for Children with Autism
+DeepWriting: Making Digital Ink Editable via Deep Generative Modeling
+Media of Things: Supporting the Production of Metadata Rich Media Through IoT Sensing
+Enhancing Online Problems Through Instructor-Centered Tools for Randomized Experiments
+Exploring the Role of Conversational Cues in Guided Task Support with Virtual Assistants
+Simulator Sickness in Augmented Reality Training Using the Microsoft HoloLens
+Experiencing the Body as Play
+Upstanding by Design: Bystander Intervention in Cyberbullying
+Examining the Demand for Spam: Who Clicks?
+ColorMod: Recoloring 3D Printed Objects using Photochromic Inks
+Multidimensional Risk Communication: Public Discourse on Risks during an Emerging Epidemic
+A Face Recognition Application for People with Visual Impairments: Understanding Use Beyond the Lab
+Evaluation Beyond Usability: Validating Sustainable HCI Research
+Beyond Translation: Design and Evaluation of an Emotional and Contextual Knowledge Interface for Foreign Language Social Media Posts
+Projective Windows: Bringing Windows in Space to the Fingertip
+Scenariot: Spatially Mapping Smart Things Within Augmented Reality Scenes
+AlterWear: Battery-Free Wearable Displays for Opportunistic Interactions
+The Role of Gamification in Participatory Environmental Sensing: A Study In the Wild
+How Information Sharing about Care Recipients by Family Caregivers Impacts Family Communication
+DataInk: Direct and Creative Data-Oriented Drawing
+Remediating a Design Tool: Implications of Digitizing Sticky Notes
+Slacktivists or Activists?: Identity Work in the Virtual Disability March
+Applying Computational Analysis to Textual Data from the Wild: A Feminist Perspective
+Design Opportunities for AAC and Children with Severe Speech and Physical Impairments
+Facebook in Venezuela: Understanding Solidarity Economies in Low-Trust Environments
+Digital Payment and Its Discontents: Street Shops and the Indian Government's Push for Cashless Transactions
+Moving Target Selection: A Cue Integration Model
+Inferring Loop Invariants through Gamification
+CrowdLayout: Crowdsourced Design and Evaluation of Biological Network Visualizations
+Imaginary Design Workbooks: Constructive Criticism and Practical Provocation
+Drunk User Interfaces: Determining Blood Alcohol Level through Everyday Smartphone Tasks
+“That Really Pushes My Buttons”: Designing Bullying and Harassment Training for the Workplace
+Taking into Account Sensory Knowledge: The Case of Geo-techologies for Children with Visual Impairments
+Understanding the Uncertainty in 1D Unidirectional Moving Target Selection
+Agile 3D Sketching with Air Scaffolding
+KeyTime: Super-Accurate Prediction of Stroke Gesture Production Times
+Entrepreneurship and the Socio-Technical Chasm in a Lean Economy
+VirtualSpace - Overloading Physical Space with Multiple Virtual Reality Users
+Effects of Socially Stigmatized Crowdfunding Campaigns in Shaping Opinions
+A Design Framework for Awareness Cues in Distributed Multiplayer Games
+Empowerment in HCI - A Survey and Framework
+Multiray: Multi-Finger Raycasting for Large Displays
+Feel the Movement: Real Motion Influences Responses to Take-over Requests in Highly Automated Vehicles
+HomeFinder Revisited: Finding Ideal Homes with Reachability-Centric Multi-Criteria Decision Making
+SpaceTokens: Interactive Map Widgets for Location-centric Interactions
+M3 Gesture Menu: Design and Experimental Analyses of Marking Menus for Touchscreen Mobile Interaction
+Queer Visibility: Supporting LGBT+ Selective Visibility on Social Media
+Bento Browser: Complex Mobile Search Without Tabs
+Chibitronics in the Wild: Engaging New Communities in Creating Technology with Paper Electronics
+A Trip to the Moon: Personalized Animated Movies for Self-reflection
+Coco's Videos: An Empirical Investigation of Video-Player Design Features and Children's Media Use
+ResearchIME: A Mobile Keyboard Application for Studying Free Typing Behaviour in the Wild
+Wearables for Learning: Examining the Smartwatch as a Tool for Situated Science Reflection
+Investigating How Online Help and Learning Resources Support Children's Use of 3D Design Software
+Tactile Information Transmission by 2D Stationary Phantom Sensations
+Understanding Artefact and Process Challenges for Designing Low-Res Lighting Displays
+Thermorph: Democratizing 4D Printing of Self-Folding Materials and Interfaces
+Looks Can Be Deceiving: Using Gaze Visualisation to Predict and Mislead Opponents in Strategic Gameplay
+Security During Application Development: an Application Security Expert Perspective
+Insert Needle Here! A Custom Display for Optimized Biopsy Needle Placement
+Automatic Diagnosis of Students' Misconceptions in K-8 Mathematics
+Defining and Predicting the Localness of Volunteered Geographic Information using Ground Truth Data
+Bots &amp; (Main)Frames: Exploring the Impact of Tangible Blocks and Collaborative Play in an Educational Programming Game
+StammerApp: Designing a Mobile Application to Support Self-Reflection and Goal Setting for People Who Stammer
+Contextualizing Privacy Decisions for Better Prediction (and Protection)
+OptiSpace: Automated Placement of Interactive 3D Projection Mapping Content
+Technology and the Givens of Existence: Toward an Existential Inquiry Framework in HCI Research
+Smart Kitchens for People with Cognitive Impairments: A Qualitative Study of Design Requirements
+Graphical Perception of Continuous Quantitative Maps: the Effects of Spatial Frequency and Colormap Design
+Wall++: Room-Scale Interactive and Context-Aware Sensing
+Design Vocabulary for Human--IoT Systems Communication
+Accountability Work: Examining the Values, Technologies and Work Practices that Facilitate Transparency in Charities
+Crowdsourcing Treatments for Low Back Pain
+Emotional Dialogue Generation using Image-Grounded Language Models
+Science Everywhere: Designing Public, Tangible Displays to Connect Youth Learning Across Settings
+Collaborative Reflection: A Practice for Enriching Research Partnerships Spanning Culture, Discipline, and Time
+Understanding Face and Eye Visibility in Front-Facing Cameras of Smartphones used in the Wild
+Perspective on and Re-orientation of Physical Proxies in Object-Focused Remote Collaboration
+The Index of Pupillary Activity: Measuring Cognitive Load <i>vis-à-vis</i> Task Difficulty with Pupil Oscillation
+Voicesetting: Voice Authoring UIs for Improved Expressivity in Augmentative Communication
+Digital Outdoor Play: Benefits and Risks from an Interaction Design Perspective
+Leveraging Community-Generated Videos and Command Logs to Classify and Recommend Software Workflows
+Towards Algorithmic Experience: Initial Efforts for Social Media Contexts
+Which one is me?: Identifying Oneself on Public Displays
+Analysis and Modeling of Grid Performance on Touchscreen Mobile Devices
+Communication Behavior in Embodied Virtual Reality
+In the Eye of the Student: An Intangible Cultural Heritage Experience, with a Human-Computer Interaction Twist
+shapeShift: 2D Spatial Manipulation and Self-Actuation of Tabletop Shape Displays for Tangible and Haptic Interaction
+Where is Community Among Online Learners?: Identity, Efficacy and Personal Ties
+SpeechBubbles: Enhancing Captioning Experiences for Deaf and Hard-of-Hearing People in Group Conversations
+Juxtapeer: Comparative Peer Review Yields Higher Quality Feedback and Promotes Deeper Reflection
+Evorus: A Crowd-powered Conversational Assistant Built to Automate Itself Over Time
+"Play PRBLMS": Identifying and Correcting Less Accessible Content in Voice Interfaces
+Exploring the Value of Parent Tracked Baby Data in Interactions with Healthcare Professionals: A Data-Enabled Design Exploration
+Tangible Awareness: How Tangibles on Tabletops Influence Awareness of Each Other's Actions
+Grand Challenges in Shape-Changing Interface Research
+Investigating the Role of an Overview Device in Multi-Device Collaboration
+Greater than the Sum of its PARTs: Expressing and Reusing Design Intent in 3D Models
+Calling for a Revolution: An Analysis of IoT Manifestos
+Share and Share Alike?: Social Information and Interaction Style in Coordination of Shared Use
+What's the Difference?: Evaluating Variations of Multi-Series Bar Charts for Visual Comparison Tasks
+Eliciting Users' Demand for Interface Features
+The Space of Possibilities: Political Economies of Technology Innovation in Sub-Saharan Africa
+"Genderfluid" or "Attack Helicopter": Responsible HCI Research Practice with Non-binary Gender Variation in Online Communities
+“Debrief O'Clock”: Planning, Recording, and Making Sense of a Day in the Field in Design Research
+Family Health Promotion in Low-SES Neighborhoods: A Two-Month Study of Wearable Activity Tracking
+Crowdsourcing vs Laboratory-Style Social Acceptability Studies?: Examining the Social Acceptability of Spatial User Interactions for Head-Worn Displays
+Empirical Support for a Causal Relationship Between Gamification and Learning Outcomes
+Going the Distance: <i>Trust Work</i> for Citizen Participation
+Methods for Intentional Encoding of High Capacity Human-Designable Visual Markers
+Investigating the Impact of Annotation Interfaces on Player Performance in Distributed Multiplayer Games
+Let's Talk About Race: Identity, Chatbots, and AI
+Extracting Regular FOV Shots from 360 Event Footage
+“Is More Better?”: Impact of Multiple Photos on Perception of Persona Profiles
+Speak Up: A Multi-Year Deployment of Games to Motivate Speech Therapy in India
+Understanding the Effect of In-Video Prompting on Learners and Instructors
+Force Jacket: Pneumatically-Actuated Jacket for Embodied Haptic Experiences
+Toward Health Information Technology that Supports Overweight/Obese Women in Addressing Emotion- and Stress-Related Eating
+Parody in Place: Exposing Socio-spatial Exclusions in Data-Driven Maps with Design Parody
+From Scanning Brains to Reading Minds: Talking to Engineers about Brain-Computer Interface
+Crowdsourcing Exercise Plans Aligned with Expert Guidelines and Everyday Constraints
+Bottom-Up Imaginaries: The Cultural-Technical Practice of Inventing Regional Advantage through IT R&amp;D
+Balancing Privacy and Information Disclosure in Interactive Record Linkage with Visual Masking
+Streets for People: Engaging Children in Placemaking Through a Socio-technical Process
+Vanishing Importance: Studying Immersive Effects of Game Audio Perception on Player Experiences in Virtual Reality
+Flexible Learning with Semantic Visual Exploration and Sequence-Based Recommendation of MOOC Videos
+“Trust Us”: Mobile Phone Use Patterns Can Predict Individual Trust Propensity
+“Suddenly, we got to become therapists for each other”: Designing Peer Support Chats for Mental Health
+Accountability in the Blue-Collar Data-Driven Workplace
+Food Democracy in the Making: Designing with Local Food Networks
+Better Understanding of Foot Gestures: An Elicitation Study
+InfoNice: Easy Creation of Information Graphics
+Metamaterial Textures
+A Case for Design Localization: Diversity of Website Aesthetics in 44 Countries
+As We May Study: Towards the Web as a Personalized Language Textbook
+KnobSlider: Design of a Shape-Changing UI for Parameter Control
+BreathVR: Leveraging Breathing as a Directly Controlled Interface for Virtual Reality Games
+Choosing to Help Monsters: A Mixed-Method Examination of Meaningful Choices in Narrative-Rich Games and Interactive Narratives
+Support for Social and Cultural Capital Development in Real-time Ridesharing Services
+Are You Dreaming?: A Phenomenological Study on Understanding Lucid Dreams as a Tool for Introspection in Virtual Reality
+A Large-Scale Study of iPhone App Launch Behaviour
+Physical Keyboards in Virtual Reality: Analysis of Typing Performance and Effects of Avatar Hands
+“Bursting the Assistance Bubble”: Designing Inclusive Technology with Children with Mixed Visual Abilities
+Review of Intrinsic Motivation in Simulation-based Game Testing
+Semi-Automated Coding for Qualitative Research: A User-Centered Inquiry and Initial Prototypes
+An Eye For Design: Gaze Visualizations for Remote Collaborative Work
+Assisting Students with Intellectual and Developmental Disabilities in Inclusive Education with Smartwatches
+Making as Expression: Informing Design with People with Complex Communication Needs through Art Therapy
+The Unexpected Entry and Exodus of Women in Computing and HCI in India
+ProtoAR: Rapid Physical-Digital Prototyping of Mobile Augmented Reality Applications
+SurfaceConstellations: A Modular Hardware Platform for Ad-Hoc Reconfigurable Cross-Device Workspaces
+Revisiting "The Rise and Decline" in a Population of Peer Production Projects
+Designing Pronunciation Learning Tools: The Case for Interactivity against Over-Engineering
+From Her Story, to Our Story: Digital Storytelling as Public Engagement around Abortion Rights Advocacy in Ireland
+Capturing, Representing, and Interacting with Laughter
+Geocaching with a Beam: Shared Outdoor Activities through a Telepresence Robot with 360 Degree Viewing
+PalmTouch: Using the Palm as an Additional Input Modality on Commodity Smartphones
+How “Wide Walls” Can Increase Engagement: Evidence From a Natural Experiment in Scratch
+Activity Tracking <i>in vivo</i>
+Understanding Users' Capability to Transfer Information between Mixed and Virtual Reality: Position Estimation across Modalities and Perspectives
+Seemo: A Computational Approach to See Emotions
+Knowing You, Seeing Me: Investigating User Preferences in Drone-Human Acknowledgement
+Evaluating CoBlox: A Comparative Study of Robotics Programming Environments for Adult Novices
+Rolling-Menu: Rapid Command Selection in Toolbars Using Roll Gestures with a Multi-DoF Mouse
+Effects of Enhanced Gaze Presentation on Gaze Leading in Remote Collaborative Physical Tasks
+Dream Lens: Exploration and Visualization of Large-Scale Generative Design Datasets
+Seeing What Is and What Can Be: On Sustainability, Respect for Work, and Design for Respect
+Everything We Do, Everything We Press: Data-Driven Remote Performance Management in a Mobile Workplace
+Social Affordances at Play: Game Design Toward Socio-Technical Innovation
+A Critical Examination of Feedback in Early Reading Games
+HCI meets Material Science: A Literature Review of Morphing Materials for the Design of Shape-Changing Interfaces
+Ticket to Talk: Supporting Conversation between Young People and People with Dementia through Digital Media
+Falling for Fake News: Investigating the Consumption of News via Social Media
+'It's Reducing a Human Being to a Percentage': Perceptions of Justice in Algorithmic Decisions
+I Really did That: Sense of Agency with Touchpad, Keyboard, and On-skin Interaction
+The Impact of Abstract vs. Concrete Feedback Design on Behavior Insights from a Large Eco-Driving Field Experiment
+Tangible Landscape: A Hands-on Method for Teaching Terrain Analysis
+[Un]breaking News: Design Opportunities for Enhancing Collaboration in Scientific Media Production
+ThermoKiosk: Investigating Roles for Digital Surveys of Thermal Experience in Workplace Comfort Management
+The Privilege of Immersion: Racial and Ethnic Experiences, Perceptions, and Beliefs in Digital Gaming
+Stitching Infrastructures to Facilitate Telemedicine for Low-Resource Environments
+BIGFile: Bayesian Information Gain for Fast File Retrieval
+The Use of Private Mobile Phones at War: Accounts From the Donbas Conflict
+ConceptScape: Collaborative Concept Mapping for Video Learning
+Expressive Time Series Querying with Hand-Drawn Scale-Free Sketches
+Prayana: Intermediated Financial Management in Resource-Constrained Settings
+ChromaGlasses: Computational Glasses for Compensating Colour Blindness
+Face Value? Exploring the Effects of Embodiment for a Group Facilitation Agent
+Coding Tactile Symbols for Phonemic Communication
+X-Ray Refine: Supporting the Exploration and Refinement of Information Exposure Resulting from Smartphone Apps
+Controlling Maximal Voluntary Contraction of the Upper Limb Muscles by Facial Electrical Stimulation
+How to Design a Digital Storytelling Authoring Tool for Developing Pre-Reading and Pre-Writing Skills
+Non-Native English Speakers Learning Computer Programming: Barriers, Desires, and Design Opportunities
+The Ambient Birdhouse: An IoT Device to Discover Birds and Engage with Nature
+Pocket Skills: A Conversational Mobile Web App To Support Dialectical Behavioral Therapy
+The Application and Its Consequences for Non-Standard Knowledge Work
+Digital Konditorei: Programmable Taste Structures using a Modular Mold
+Exploring the Weak Association between Flow Experience and Performance in Virtual Environments
+Understanding the Mundane Nature of Self-care: Ethnographic Accounts of People Living with Parkinson's
+EDITalk: Towards Designing Eyes-free Interactions for Mobile Word Processing
+Improving User Confidence in Concept Maps: Exploring Data Driven Explanations
+Spokespeople: Exploring Routes to Action through Citizen-Generated Data
+Evaluating the Disruptiveness of Mobile Interactions: A Mixed-Method Approach
+Make Yourself at Phone: Reimagining Mobile Interaction Architectures With Emergent Users
+Interactive Feedforward for Improving Performance and Maintaining Intrinsic Motivation in VR Exergaming
+ARcadia: A Rapid Prototyping Platform for Real-time Tangible Interfaces
+Building Momentum: Scaling up Change in Community Organizations
+Mechanism Perfboard: An Augmented Reality Environment for Linkage Mechanism Design and Fabrication
+Addressing Age-Related Bias in Sentiment Analysis
+Identification of Imminent Suicide Risk Among Young Adults using Text Messages
+Touch Your Heart: A Tone-aware Chatbot for Customer Care on Social Media
+Modern Bereavement: A Model for Complicated Grief in the Digital Age
+Using Animation to Alleviate Overdraw in Multiclass Scatterplot Matrices
+The Context of College Students' Facebook Use and Academic Performance: An Empirical Study
+Designing Consistent Gestures Across Device Types: Eliciting RSVP Controls for Phone, Watch, and Glasses
+Supporting the Complex Social Lives of New Parents
+Algorithmic Anxiety and Coping Strategies of Airbnb Hosts
+More Text Please! Understanding and Supporting the Use of Visualization for Clinical Text Overview
+The SelfReflector: Design, IoT and the High Street
+Co-constructing Family Memory: Understanding the Intergenerational Practices of Passing on Family Stories
+Seismo: Blood Pressure Monitoring using Built-in Smartphone Accelerometer and Camera
+Jetto: Using Lateral Force Feedback for Smartwatch Interactions
+ExtVision: Augmentation of Visual Experiences with Generation of Context Images for a Peripheral Vision Using Deep Neural Network
+Substituting Motion Effects with Vibrotactile Effects for 4D Experiences
+Communicating Awareness and Intent in Autonomous Vehicle-Pedestrian Interaction
+Running Out of Time: The Impact and Value of Flexibility in On-Demand Crowdwork
+Tensions of Data-Driven Reflection: A Case Study of Real-Time Emotional Biosensing
+Communicating Algorithmic Process in Online Behavioral Advertising
+Quadcopter-Projected In-Situ Navigation Cues for Improved Location Awareness
+P2PSTORY: Dataset of Children as Storytellers and Listeners in Peer-to-Peer Interactions
+Personalizing Persuasive Strategies in Gameful Systems to Gamification User Types
+Your Eyes Tell: Leveraging Smooth Pursuit for Assessing Cognitive Workload
+FingerPing: Recognizing Fine-grained Hand Poses using Active Acoustic On-body Sensing
+Frames and Slants in Titles of Visualizations on Controversial Topics
+Typing on an Invisible Keyboard
+Fairness and Accountability Design Needs for Algorithmic Support in High-Stakes Public Sector Decision-Making
+PEP (3D Printed Electronic Papercrafts): An Integrated Approach for 3D Sculpting Paper-Based Electronic Devices
+Between Grassroots and the Hierarchy: Lessons Learned from the Design of a Public Services Directory
+Social Influences on Executive Functioning in Autism: Design of a Mobile Gaming Platform
+A Large Inclusive Study of Human Listening Rates
+Storyboard-Based Empirical Modeling of Touch Interface Performance
+Adding Force Feedback to Mixed Reality Experiences and Games using Electrical Muscle Stimulation
+Learning from the Veg Box: Designing Unpredictability in Agency Delegation
+Knotation: Exploring and Documenting Choreographic Processes
+A Data-Driven Analysis of Workers' Earnings on Amazon Mechanical Turk
+Double-sided Printed Tactile Display with Electro Stimuli and Electrostatic Forces and its Assessment
+RecipeScape: An Interactive Tool for Analyzing Cooking Instructions at Scale
+Fostering Commonfare. Infrastructuring Autonomous Social Collaboration
+Designing for Student Interactions: The Role of Embodied Interactions in Mediating Collective Inquiry in an Immersive Simulation
+LoopMaker: Automatic Creation of Music Loops from Pre-recorded Music
+Doppio: Tracking UI Flows and Code Changes for App Development
+“It's not actually that horrible”: Exploring Adoption of Two-Factor Authentication at a University
+Am I a Bunny?: The Impact of High and Low Immersion Platforms and Viewers' Perceptions of Role on Presence, Narrative Engagement, and Empathy during an Animated 360° Video
+Making Sense of Blockchain Applications: A Typology for HCI
+"Accessibility Came by Accident": Use of Voice-Controlled Intelligent Personal Assistants by People with Disabilities
+Conveying the Perception of Kinesthetic Feedback in Virtual Reality using State-of-the-Art Hardware
+A Bermuda Triangle?: A Review of Method Application and Triangulation in User Experience Evaluation
+Designing Future Social Wearables with Live Action Role Play (Larp) Designers
+Antibiotic-Responsive Bioart: Exploring DIYbio as a Design Studio Practice
+More Than a Show: Using Personalized Immersive Theater to Educate and Engage the Public in Technology Ethics
+CatAR: A Novel Stereoscopic Augmented Reality Cataract Surgery Training System with Dexterous Instruments Tracking Technology
+You Watch, You Give, and You Engage: A Study of Live Streaming Practices in China
+Bolt: Instantaneous Crowdsourcing via Just-in-Time Training
+Convey: Exploring the Use of a Context View for Chatbots
+Confronting Social Criticisms: Challenges when Adopting Data-Driven Policing Strategies
+Weaving Lighthouses and Stitching Stories: Blind and Visually Impaired People Designing E-textiles
+This Changes Sustainable HCI
+Use the Right Sound for the Right Job: Verbal Commands and Auditory Icons for a Task-Management System Favor Different Information Processes in the Brain
+Iris: A Conversational Agent for Complex Tasks
+Explaining Viewers' Emotional, Instrumental, and Financial Support Provision for Live Streamers
+Making the News: Digital Creativity Support for Journalists
+Visual ODLs: Co-Designing Patient-Generated Observations of Daily Living to Support Data-Driven Conversations in Pediatric Care
+Improving Discoverability and Expert Performance in Force-Sensitive Text Selection for Touch Devices with Mode Gauges
+Vibrational Artificial Subtle Expressions: Conveying System's Confidence Level to Users by Means of Smartphone Vibration
+Investigating the Effect of the Multiple Comparisons Problem in Visual Analysis
+Passenger Trip Planning using Ride-Sharing Services
+Infrastructuring the Solidarity Economy: Unpacking Strategies and Tactics in Designing Social Innovation
+Exploring Co-design with Breastfeeding Mothers
+The Dream is Collapsing: The Experience of Exiting VR
+Common Barriers to the Use of Patient-Generated Data Across Clinical Settings
+Analyzing the Effect of Avatar Self-Similarity on Men and Women in a Search and Rescue Game
+Supporting Rhythm Activities of Deaf Children using Music-Sensory-Substitution Systems
+Traces: Studying a Public Reactive Floor-Projection of Walking Trajectories to Support Social Awareness
+Exploring Accessible Smartwatch Interactions for People with Upper Body Motor Impairments
+Pseudonymous Parents: Comparing Parenting Roles and Identities on the Mommit and Daddit Subreddits
+Experiential Augmentation: Uncovering The Meaning of Qualitative Visualizations when Applied to Augmented Objects
+Enabling the Participation of People with Parkinson's and their Caregivers in Co-Inquiry around Collectivist Health Technologies
+Who Provides Phishing Training?: Facts, Stories, and People Like Me
+Unpacking Perceptions of Data-Driven Inferences Underlying Online Targeting and Personalization
+Inaccuracy Blindness in Collaboration Persists, even with an Evaluation Prompt
+Huggable: The Impact of Embodiment on Promoting Socio-emotional Interactions for Young Pediatric Inpatients
+Forte: User-Driven Generative Design
+PolarTrack: Optical Outside-In Device Tracking that Exploits Display Polarization
+Revisiting “Hole in the Wall” Computing: Private Smart Speakers and Public Slum Settings
+Values, Identity, and Social Translucence: Neurodiverse Student Teams in Higher Education
+T-Cal: Understanding Team Conversational Data with Calendar-based Visualization
+HapCube: A Wearable Tactile Device to Provide Tangential and Normal Pseudo-Force Feedback on a Fingertip
+Keppi: A Tangible User Interface for Self-Reporting Pain
+Data, Data Everywhere, and Still Too Hard to Link: Insights from User Interactions with Diabetes Apps
+Rewire: Interface Design Assistance from Examples
+Uncertainty Visualization Influences how Humans Aggregate Discrepant Information
+Content is King, Leadership Lags: Effects of Prior Experience on Newcomer Retention and Productivity in Online Production Groups
+Strategies for Engaging Communities in Creating Physical Civic Technologies
+Neuromechanics of a Button Press
+Is it Happy?: Behavioural and Narrative Frame Complexity Impact Perceptions of a Simple Furry Robot's Emotions
+Designing a Reclamation of Body and Health: Cancer Survivor Tattoos as Coping Ritual
+Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers
+An Experience Sampling Study of User Reactions to Browser Warnings in the Field
+Extracting Design Guidelines for Wearables and Movement in Tabletop Role-Playing Games via a Research Through Design Process
+Exploring the Design of Tailored Virtual Reality Experiences for People with Dementia
+Project Zanzibar: A Portable and Flexible Tangible Interaction Platform
+The RAD: Making Racing Games Equivalently Accessible to People Who Are Blind
+Inclusive Computing in Special Needs Classrooms: Designing for All
+Caption Crawler: Enabling Reusable Alternative Text Descriptions using Reverse Image Search
+How Far Is Up?: Bringing the Counterpointed Triad Technique to Digital Storybook Apps
+Understanding the Accessibility of Smartphone Photography for People with Motor Impairments
+Ohmic-Touch: Extending Touch Interaction by Indirect Touch through Resistive Objects
+TeleHuman2: A Cylindrical Light Field Teleconferencing System for Life-size 3D Human Telepresence
+Co-designing Mobile Online Safety Applications with Children
+Intellingo: An Intelligible Translation Environment
+Thor's Hammer: An Ungrounded Force Feedback Device Utilizing Propeller-Induced Propulsive Force
+Transforming Last-mile Logistics: Opportunities for more Sustainable Deliveries
+CraftML: 3D Modeling is Web Programming
+ForceBoard: Subtle Text Entry Leveraging Pressure
+PageFlip: Leveraging Page-Flipping Gestures for Efficient Command and Value Selection on Smartwatches
+Inpher: Inferring Physical Properties of Virtual Objects from Mid-Air Interaction
+Making Core Memory: Design Inquiry into Gendered Legacies of Engineering and Craftwork
+Augmenting Code with In Situ Visualizations to Aid Program Understanding
+Pointing All Around You: Selection Performance of Mouse and Ray-Cast Pointing in Full-Coverage Displays
+The Dark (Patterns) Side of UX Design
+Charrette: Supporting In-Person Discussions around Iterations in User Interface Design
+Design Within a Patriarchal Society: Opportunities and Challenges in Designing for Rural Women in Bangladesh
+This App Would Like to Use Your Current Location to Better Serve You: Importance of User Assent and System Transparency in Personalized Mobile Services
+Pictures Worth a Thousand Words: Reflections on Visualizing Personal Blood Glucose Forecasts for Individuals with Type 2 Diabetes
+Pac-Many: Movement Behavior when Playing Collaborative and Competitive Games on Large Displays
+BebeCODE: Collaborative Child Development Tracking System
+Beyond the Libet Clock: Modality Variants for Agency Measurements
+PokeRing: Notifications by Poking Around the Finger
+Forgotten But Not Gone: Identifying the Need for Longitudinal Data Management in Cloud Storage
+A Functional Optimization Based Approach for Continuous 3D Retargeted Touch of Arbitrary, Complex Boundaries&nbsp;in&nbsp;Haptic&nbsp;Virtual Reality
+Sense of Presence, Attitude Change, Perspective-Taking and Usability in First-Person Split-Sphere 360° Video
+“I Hear You”: Understanding Awareness Information Exchange in an Audio-only Workspace
+User-Driven Design Principles for Gesture Representations
+To Put That in Perspective: Generating Analogies that Make Numbers Easier to Understand
+Addressing Network Anxieties with Alternative Design Metaphors
+Supporting Communication between Grandparents and Grandchildren through Tangible Storytelling Systems
+Tangible Tens: Evaluating a Training of Basic Numerical Competencies with an Interactive Tabletop
+'You Can Always Do Better!": The Impact of Social Proof on Participant Response Bias
+Teaching Language to Deaf Infants with a Robot and a Virtual Human
+ExtraSensory App: Data Collection In-the-Wild with Rich User Interface to Self-Report Behavior
+Collaborative Live Media Curation: Shared Context for Participation in Online Learning
+Measuring, Understanding, and Classifying News Media Sympathy on Twitter after Crisis Events
+Defining Through Expansion: Conducting Asynchronous Remote Communities (ARC) Research with Stigmatized Groups
+ActiveErgo: Automatic and Personalized Ergonomics using Self-actuating Furniture
+Presenting The Accessory Approach: A Start-up's Journey Towards Designing An Engaging Fall Detection Device
+What Moves Players?: Visual Data Exploration of Twitter and Gameplay Data
+Veritaps: Truth Estimation from Mobile Interaction
+How the Experts Do It: Assessing and Explaining Agent Behaviors in Real-Time Strategy Games
+A Study of Urban Heat: Understanding the Challenges and Opportunities for Addressing Wicked Problems in HCI
+It's a Wrap: Mapping On-Skin Input to Off-Skin Displays
+Designing in the Dark: Eliciting Self-tracking Dimensions for Understanding Enigmatic Disease
+Examining Wikipedia With a Broader Lens: Quantifying the Value of Wikipedia's Relationships with Other Large-Scale Online Communities
+Identifying Speech Input Errors Through Audio-Only Interaction
+Designing the Audience Journey through Repeated Experiences
+Printed Paper Actuator: A Low-cost Reversible Actuation and Sensing Method for Shape Changing Interfaces
+Leveraging Semantic Transformation to Investigate Password Habits and Their Causes
+Impact Activation Improves Rapid Button Pressing
+MindNavigator: Exploring the Stress and Self-Interventions for Mental Wellness
+"Only if you use English you will get to more things": Using Smartphones to Navigate Multilingualism
+The Problem of Community Engagement: Disentangling the Practices of Municipal Government
+Using Co-Design to Examine How Children Conceptualize Intelligent Interfaces
+Rethinking Engagement with Online News through Social and Visual Co-Annotation
+Season Traveller: Multisensory Narration for Enhancing the Virtual Reality Experience
+Playing with Streakiness in Online Games: How Players Perceive and React to Winning and Losing Streaks in League of Legends
+RoMA: Interactive Fabrication with Augmented Reality and a Robotic 3D Printer
+Visualizing API Usage Examples at Scale
+A Multi-site Investigation of Community Awareness Through Passive Location Sharing
+Trends and Trajectories for Explainable, Accountable and Intelligible Systems: An HCI Research Agenda
+TopicOnTiles: Tile-Based Spatio-Temporal Event Analytics via Exclusive Topic Modeling on Social Media
+In a New Land: Mobile Phones, Amplified Pressures and Reduced Capabilities
+Lessons from the Woodshop: Cultivating Design with Living Materials
+Squadbox: A Tool to Combat Email Harassment Using Friendsourced Moderation
+Hoarding and Minimalism: Tendencies in Digital Data Preservation
+Mercury: A Messaging Framework for Modular UI Components
+Characterizing Finger Pitch and Roll Orientation During Atomic Touch Actions
+Extending Manual Drawing Practices with Artist-Centric Programming Tools
+Sensing Interruptibility in the Office: A Field Study on the Use of Biometric and Computer Interaction Sensors
+Customizing Developmentally Situated Design (DSD) Cards: Informing Designers about Preschoolers' Spatial Learning
+Framed Guessability: Improving the Discoverability of Gestures and Body Movements for Full-Body Interaction
+Beagle: Automated Extraction and Interpretation of Visualizations from the Web
+Mediating Conflicts in Minecraft: Empowering Learning in Online Multiplayer Games
+GestAKey: Touch Interaction on Individual Keycaps
+How Social Dynamics and the Context of Digital Content Impact Workplace Remix
+Somewhere Over the Rainbow: An Empirical Assessment of Quantitative Colormaps
+Two Kinds of Novel Multi-user Immersive Display Systems
+The Effects of Badges and Avatar Identification on Play and Making in Educational Games
+Full-Body Ownership Illusion Can Change Our Emotion
+c.light: A Tool for Exploring Light Properties in Early Design Stage
+Steering through Successive Objects
+The Ethnobot: Gathering Ethnographies in the Age of IoT
+An Experimental Study of Cryptocurrency Market Dynamics
+Paragon: An Online Gallery for Enhancing Design Feedback with Visual Examples
+Personality Depends on The Medium: Differences in Self-Perception on Snapchat, Facebook and Offline
+"We Don't Do That Here": How Collaborative Editing with Mentors Improves Engagement in Social Q&amp;A Communities
+Using High Frequency Accelerometer and Mouse to Compensate for End-to-end Latency in Indirect Interaction
+Modeling Perceived Screen Resolution Based on Position and Orientation of Wrist-Worn Devices
+Investigating Perceptual Congruence between Data and Display Dimensions in Sonification
+Acceptability and Acceptance of Autonomous Mobility on Demand: The Impact of an Immersive Experience
+BioFidget: Biofeedback for Respiration Training Using an Augmented Fidget Spinner
+Gender-Inclusive Design: Sense of Belonging and Bias in Web Interfaces
+Too Close and Crowded: Understanding Stress on Mobile Instant Messengers based on Proxemics
+Socioeconomic Inequalities in the Non use of Facebook
+Navigation Systems for Motorcyclists: Exploring Wearable Tactile Feedback for Route Guidance in the Real World
+CodeTalk: Improving Programming Environment Accessibility for Visually Impaired Developers
+Morphees+: Studying Everyday Reconfigurable Objects for the Design and Taxonomy of Reconfigurable UIs
+The Theory-Practice Gap as Generative Metaphor
+Playing to Wait: A Taxonomy of Idle Games
+Empowering Families Facing English Literacy Challenges to Jointly Engage in Computer Programming
+Digital Exhibit Labels in Museums: Promoting Visitor Engagement with Cultural Artifacts
+Training Person-Specific Gaze Estimators from User Interactions with Multiple Devices
+Designing for Diabetes Decision Support Systems with Fluid Contextual Reasoning
+The Impact of Word, Multiple Word, and Sentence Input on Virtual Keyboard Decoding Performance
+Designing the Future of Personal Fashion
+To Distort or Not to Distort: Distance Cartograms in the Wild
+Towards a Multisensory Augmented Reality Map for Blind and Low Vision People: a Participatory Design Approach
+Scaling Classroom IT Skill Tutoring: A Case Study from India
+Regulating Feelings During Interpersonal Conflicts by Changing Voice Self-perception
+Flotation Simulation in a Cable-driven Virtual Environment -- A Study with Parasailing
+Identity Work as Deliberation: AAPI Political Discourse in the 2016 US Presidential Election
+D-SWIME: A Design Space for Smartwatch Interaction Techniques Supporting Mobility and Encumbrance
+A Visual Interaction Framework for Dimensionality Reduction Based Data Exploration
+Complex Mediation in the Formation of Political Opinions
+NavigaTone: Seamlessly Embedding Navigation Cues in Mobile Music Listening
+Considering Agency and Data Granularity in the Design of Visualization Tools
+El Paquete Semanal: The Week's Internet in Havana
+Voice Interfaces in Everyday Life
+Mental Health Support and its Relationship to Linguistic Accommodation in Online Communities
+Value-Suppressing Uncertainty Palettes
+Baang: A Viral Speech-based Social Platform for Under-Connected Populations
+Haptic Links: Bimanual Haptics for Virtual Reality Using Variable Stiffness Actuation
+Breeze: Sharing Biofeedback through Wearable Technologies
+Observations on Typing from 136 Million Keystrokes
+Selection-based Text Entry in Virtual Reality
+Effects of Viewing Multiple Viewpoint Videos on Metacognition of Collaborative Experiences
+I Lead, You Help but Only with Enough Details: Understanding User Experience of Co-Creation with Artificial Intelligence
+Supporting Collaborative Health Tracking in the Hospital: Patients' Perspectives
+Investigating the Impact of Gender on Rank in Resume Search Engines
+Cognitive Load Estimation in the Wild
+The Effect of Offset Correction and Cursor on Mid-Air Pointing in Real and Virtual Environments
+CLAW: A Multifunctional Handheld Haptic Controller for Grasping, Touching, and Triggering in Virtual Reality
+Ripple Thermostat: Affecting the Emotional Experience through Interactive Force Feedback and Shape Change
+A Qualitative Exploration of Perceptions of Algorithmic Fairness
+The Benefits and Challenges of Video Calling for Emergency Situations
+Whiskers: Exploring the Use of Ultrasonic Haptic Cues on the Face
+Let's Play!: Digital and Analog Play between Preschoolers and Parents
+Combating Attrition in Digital Self-Improvement Programs using Avatar Customization
+Use the Force Picker, Luke: Space-Efficient Value Input on Force-Sensitive Mobile Touchscreens
+Live Sketch: Video-driven Dynamic Deformation of Static Drawings
+ECGLens: Interactive Visual Exploration of Large Scale ECG Data for Arrhythmia Detection
+"Protection on that Erection?": Discourses of Accountability &amp; Compromising Participation in Digital Sexual Health
+Fast &amp; Furious: Detecting Stress with a Car Steering Wheel
+Norms Matter: Contrasting Social Support Around Behavior Change in Online Weight Loss Communities
+“A Stalker's Paradise”: How Intimate Partner Abusers Exploit Technology
