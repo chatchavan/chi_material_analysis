@@ -100,6 +100,23 @@ lookup_col_names <- function(df, omit_free_text = TRUE) {
 }
 
 
+#===============================================================================
+# a look-up table for material types
+
+lookup_table_material_types <- function() {
+  lut_df <- read_csv("input/col_lut.csv", col_types = "cc")
+
+  lut_df %>%
+    filter(str_detect(col_name, "exist$")) %>%
+    mutate(col_name = str_remove(col_name, "_exist")) %>%
+    mutate(lime_code = str_match(col_name_lime, "\\[(.+)\\]")[,2]) %>%
+    mutate(lime_code = case_when(
+      col_name == "others" ~ "others",
+      TRUE ~ lime_code
+    )) %>%
+    select(lime_code, target_code = col_name)
+}
+
 make_long_format <- function(df) {
   existence <-
     df %>%
