@@ -34,20 +34,51 @@ freq_reasons <-
 
 p_tmp <-
   freq_reasons %>%
-  ggplot(aes(x = type, y = n, fill = reason)) +
+  ggplot(aes(x = reason, y = n)) +
   geom_col() +
-  scale_x_material_type +
+  scale_fill_20 +
+  xlab(NULL) +
+  coord_flip() +
+  facet_wrap( ~ type) +
+  guides(fill = guide_legend(ncol = 1, keywidth = 0.5, keyheight = 0.5)) +
+  ggtitle("RQ 2")
+
+# TODO: make a percentage plot calculate percent per category
+
+ggsave("output/private_reason_by_type.pdf", p_tmp, height = 300/72, width = 300/72, unit = "in", dpi = 72)
+
+#===============================================================================
+# RQE: What is the distribution of reasons across types?
+
+
+p_tmp <-
+  freq_reasons %>%
+  ggplot(aes(x = reason, y = n)) +
+  geom_col() +
   scale_fill_20 +
   xlab(NULL) +
   coord_flip() +
   guides(fill = guide_legend(ncol = 1, keywidth = 0.5, keyheight = 0.5)) +
-  ggtitle("RQ 2")
+  ggtitle("Overall distribtion of reasons")
 
-ggsave("output/private_reason_by_type.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
+p_tmp <-
+  freq_reasons %>%
+  group_by(reason) %>%
+  summarise(n = sum(n)) %>%
+  mutate(reason = fct_reorder(fct_explicit_na(reason), n)) %>%
+  ggplot(aes(x = reason, y = n)) +
+  geom_col() +
+  xlab(NULL) +
+  coord_flip() +
+  ggtitle("Overall distribtion of reasons")
+
+ggsave("output/private_reason_overall.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
+
 
 persist(reasons_long)
 persist(freq_reasons)
 rm_all()
+
 
 #===============================================================================
 # RQ 2.1: How frequently do the private materials are deemed relevant to the claims in the paper?
