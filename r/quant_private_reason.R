@@ -16,33 +16,42 @@ df_all <-
 
 # (For reference: 665 inivitations; 222 responses; of which 29 didn’t generate any research material)
 
+# determine research methodolgy types
+ids_with_quan <- df_all %>% filter(method == "quan") %>% pull(id) %>% unique()
+ids_with_qual <- df_all %>% filter(method == "qual") %>% pull(id) %>% unique()
+ids_mix <- intersect(ids_with_quan, ids_with_qual)
+ids_quan <- setdiff(ids_with_quan, ids_with_qual)
+ids_qual <- setdiff(ids_with_qual, ids_with_quan)
+
+# recode the methdology type for those with mixed method
+df_all <-
+  df_all %>%
+  mutate(method = if_else(id %in% ids_mix, "mix", method))
+
 # summary of the responses by research methodology type
+#    (NA means neither quant or qual, e.g., technology contribution)
+tbl_total <-
 df_all %>%
   group_by(method) %>%
-  summarise(n = n_distinct(id))
+  summarise(n_total = n_distinct(id))
 
 # summary of the private material responses by research methodology
-#    (NA means neither quant or qual, e.g., technology contribution)
-df_all %>%
+tbl_private <-
+  df_all %>%
   filter(!is_public) %>%
   group_by(method) %>%
-  summarise(n = n_distinct(id))
+  summarise(n_private = n_distinct(id))
 
+tbl_summary <- inner_join(tbl_total, tbl_private, by = "method")
 
+#===============================================================================
 # subsetting only papers with quantitative materials that are private
-df_quan <-
-  df_all %>%
-  filter(method == "quan")
-
 df_quan_private <-
-  df_quan %>%
+  df_all %>%
+  filter(method == "quan" | method == "mix") %>%
   filter(!is_public)
 
 n_quan_private <- n_distinct(df_quan_private$id)
-
-print(glue("Number of responses with at least one of the predefined material type: {n_distinct(df_all$id)}"))
-print(glue("... those of which with quantiative studies: {n_distinct(df_quan$id)}"))
-print(glue("...... those of which with at least one material private: {n_quan_private}"))
 
 persist(df_quan_private)
 persist(n_quan_private)
