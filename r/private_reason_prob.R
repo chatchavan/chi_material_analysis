@@ -45,41 +45,64 @@ tbl_private <-
 tbl_summary <- inner_join(tbl_total, tbl_private, by = "method")
 
 #===============================================================================
-# subsetting only papers with quantitative materials that are private
-df_quan_private <-
+# determine the probability of each reason
+tabulte_reason_prob <- function(df) {
+  paper_count <- n_distinct(df$id)
+
+  reasons_long <-
+    df %>%
+    select(id, method, type, reason) %>%
+    mutate(reason = str_split(reason, ",")) %>%
+    unnest(reason)
+
+  reasons_prob <-
+    reasons_long %>%
+    group_by(reason) %>%
+    summarize(
+      n = n_distinct(id),
+      probability = n_distinct(id) / paper_count)
+
+  reasons_prob
+}
+
+reason_prob_quan <-
   df_all %>%
   filter(method == "quan" | method == "mix") %>%
-  filter(!is_public)
+  filter(!is_public) %>%
+  tabulte_reason_prob()
 
-n_quan_private <- n_distinct(df_quan_private$id)
-
-persist(df_quan_private)
-persist(n_quan_private)
-rm_all()
+reason_prob_qual <-
+  df_all %>%
+  filter(method == "qual" | method == "mix") %>%
+  filter(!is_public) %>%
+  tabulte_reason_prob()
 
 #===============================================================================
-# determine the probability of each reason
+# plot
 
-reasons_long <-
-  df_quan_private %>%
-  select(id, method, type, reason) %>%
-  mutate(reason = str_split(reason, ",")) %>%
-  unnest(reason)
+reason_prob_quan$category = "quan"
+reason_prob_qual$category = "qual"
+reason_prob <-
+  bind_rows(reason_prob_qual, reason_prob_quan) %>%
+  mutate(reason = fct_explicit_na(reason, na_level = "(unspecified)"))
 
-reasons_prob <-
-  reasons_long %>%
-  group_by(reason) %>%
-  summarize(prob = n_distinct(id) / n_quan_private)
+# (for plotting)
+reason_prob_quan_only <- reason_prob %>% filter(category == "quan")
+reason_prob_qual_only <- reason_prob %>% filter(category == "qual")
 
 p_tmp <-
-  reasons_prob %>%
-  mutate(reason = fct_reorder(fct_explicit_na(reason, na_level = "(unspecified)"), prob)) %>%
-  ggplot(aes(x = reason, y = prob)) +
-  geom_col() +
+  reason_prob %>%
+  ggplot(aes(x = category, y = probability, color = reason)) +
+  geom_point() +
+  geom_text(aes(label = reason, x = category, y = probability), data = reason_prob_quan_only,
+    nudge_x = 0.1, color = "black", hjust = "left", size = 2) +
+  geom_text(aes(label = reason, x = category, y = probability), data = reason_prob_qual_only,
+    nudge_x = -0.1, color = "black", hjust = "right", size = 2) +
+  scale_x_discrete(expand = expand_scale(add = c(2, 2))) +
+  scale_color_20 +
   xlab(NULL) +
-  ylab("Probability") +
-  coord_flip() +
-  ggtitle("Reasons for private materials (Quantitative studies)",
-    subtitle = glue("Among {n_quan_private} papers with at least one type of quantitative materials"))
+  guides(
+    color = FALSE) # guide_legend(keyheight = 0.5, keywidth = 0.5))
 
-ggsave("output/private_reason_prob_quan.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
+ggsave("output/private_reason_prob.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
+
