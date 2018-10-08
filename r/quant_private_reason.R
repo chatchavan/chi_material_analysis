@@ -10,10 +10,26 @@ source("r/io.R")
 
 
 #===============================================================================
-# subsetting only papers with quantitative materials that are private
+# summary
 df_all <-
   load_data(limesurvey_export_path, exclude_mismatch = FALSE)
 
+# (For reference: 665 inivitations; 222 responses; of which 29 didn’t generate any research material)
+
+# summary of the responses by research methodology type
+df_all %>%
+  group_by(method) %>%
+  summarise(n = n_distinct(id))
+
+# summary of the private material responses by research methodology
+#    (NA means neither quant or qual, e.g., technology contribution)
+df_all %>%
+  filter(!is_public) %>%
+  group_by(method) %>%
+  summarise(n = n_distinct(id))
+
+
+# subsetting only papers with quantitative materials that are private
 df_quan <-
   df_all %>%
   filter(method == "quan")
@@ -52,8 +68,9 @@ p_tmp <-
   ggplot(aes(x = reason, y = prob)) +
   geom_col() +
   xlab(NULL) +
+  ylab("Probability") +
   coord_flip() +
-  ggtitle("Probability of reasons for private materials (Quantitative studies)",
+  ggtitle("Reasons for private materials (Quantitative studies)",
     subtitle = glue("Among {n_quan_private} papers with at least one type of quantitative materials"))
 
 ggsave("output/private_reason_prob_quan.pdf", p_tmp, height = 200/72, width = 300/72, unit = "in", dpi = 72)
