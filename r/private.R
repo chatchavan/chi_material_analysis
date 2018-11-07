@@ -14,7 +14,17 @@ df_private <-
   load_data(limesurvey_export_path, should_exclude_mismatch) %>%
   filter(!is_public)
 
+df_all <-
+  load_data(limesurvey_export_path, exclude_mismatch = FALSE)
+
+paper_count_by_type <-
+  df_all %>%
+  group_by(type) %>%
+  summarize(paper_count = n_distinct(id)) %>%
+  ungroup
+
 persist(df_private)
+persist(paper_count_by_type)
 rm_all()
 
 #===============================================================================
@@ -43,9 +53,31 @@ p_tmp <-
   guides(fill = guide_legend(ncol = 1, keywidth = 0.5, keyheight = 0.5)) +
   ggtitle("RQ 2")
 
-# TODO: make a percentage plot calculate percent per category
-
 ggsave("output/private_reason_by_type.pdf", p_tmp, height = 300/72, width = 300/72, unit = "in", dpi = 72)
+
+
+#-------------------------------------------------------------------------------
+# calculate probability
+
+prob_reasons <-
+  freq_reasons %>%
+  right_join(paper_count_by_type, by = "type") %>%
+  mutate(probability = n / paper_count) %>%
+  select(type, reason, probability) %>%
+  mutate(label = sprintf("%2.0f %%", probability * 100))
+
+p_tmp <-
+  prob_reasons %>%
+  ggplot(aes(x = reason, y = probability)) +
+  geom_col() +
+  geom_text(aes(label = label), size = 1, nudge_y = 0.1) +
+  scale_fill_20 +
+  xlab(NULL) +
+  coord_flip() +
+  facet_wrap( ~ type) +
+  guides(fill = guide_legend(ncol = 1, keywidth = 0.5, keyheight = 0.5))
+
+ggsave("output/private_reason_by_type_prob.pdf", p_tmp, height = 300/72, width = 300/72, unit = "in", dpi = 72)
 
 #===============================================================================
 # RQE: What is the distribution of reasons across types?
