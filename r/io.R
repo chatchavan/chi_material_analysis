@@ -47,6 +47,18 @@ load_data <- function(path, exclude_mismatch = FALSE) {
 }
 
 
+load_urls <- function(path) {
+  df <-
+    load_raw(path)  %>%
+    lookup_col_names()
+
+  df %>%
+    select(id, contains("_url_")) %>%
+    gather("type", "url", contains("_url_")) %>%
+    filter(!is.na(url)) %>%
+    separate(type, c("type", "location_type"), sep = "_url_")
+}
+
 # prepare a look-up table from LimeSurvey column names to readable names
 make_blank_lut <- function(df) {
   col_lut <-

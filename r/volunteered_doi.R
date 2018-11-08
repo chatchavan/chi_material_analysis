@@ -9,9 +9,7 @@ source("r/io.R")
 
 #===============================================================================
 # load and convert data to a long format
-df_survey <-
-  load_raw(limesurvey_export_path)  %>%
-  lookup_col_names(omit_free_text = FALSE)
+df_survey <- load_data(limesurvey_export_path, should_exclude_mismatch)
 
 
 #===============================================================================
@@ -26,13 +24,21 @@ df_postsurvey <-
 
 
 #===============================================================================
+# retrieve URLs
+
+df_urls <-
+  load_urls(limesurvey_export_path) %>%
+  rename(material_url = url)
+
+#===============================================================================
 # associate volunteered DOI to response
 df_volunteered <-
   df_postsurvey %>%
   left_join(paper_info, by = "doi") %>%
   left_join(df_survey, by = "id") %>%
-  select(-submitdate, -lastpage, -startlanguage, -seed, -startdate, -datestamp)
+  left_join(df_urls, by = c("id", "type")) %>%
+  select(id, title, type, is_claim_related, is_public, location, location_type, material_url, everything())
 
 #===============================================================================
 # save output
-write_csv(df_volunteered, "output/volunteered_dois/responses.csv")
+write_tsv(df_volunteered, "output/volunteered_dois/responses.tsv")
