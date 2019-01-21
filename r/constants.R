@@ -19,6 +19,20 @@ types_dict <- list(
 )
 persist(types_dict)
 
+types_short_dict <- list(
+  "study"         = "Study materials",
+  "qualraw"       = "Raw data",
+  "qualcoded"     = "Coded data",
+  "qualcodebook"  = "Coding manual",
+  "quanraw"       = "Raw data",
+  "quanprocessed" = "Processed data",
+  "quancode"      = "Analysis source code",
+  "software"      = "Software",
+  "hardware"      = "Hardware"
+)
+persist(types_short_dict)
+
+
 
 # overall analysis settings
 
