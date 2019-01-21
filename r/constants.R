@@ -6,6 +6,19 @@ types_data_quan <- c("quanraw", "quanprocessed", "quancode")
 persist(types_data_qual)
 persist(types_data_quan)
 
+types_dict <- list(
+  "study"         = "Study materials",
+  "qualraw"       = "Raw qualiative data",
+  "qualcoded"     = "Coded qualitative data",
+  "qualcodebook"  = "Coding manual for qualitative data",
+  "quanraw"       = "Raw quantitative data",
+  "quanprocessed" = "Processed quantitative data",
+  "quancode"      = "Data analysis source code",
+  "software"      = "Software prototypes",
+  "hardware"      = "Hardware prototypes"
+)
+persist(types_dict)
+
 
 # overall analysis settings
 

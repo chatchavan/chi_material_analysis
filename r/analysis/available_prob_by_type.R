@@ -58,23 +58,11 @@ public_by_type_ci <-
 
 #===============================================================================
 # plot preparation
-
-types_list <- list(
-  "study"         = "Study materials",
-  "qualraw"       = "Raw qualiative data",
-  "qualcoded"     = "Coded qualitative data",
-  "qualcodebook"  = "Coding manual for qualitative data",
-  "quanraw"       = "Raw quantitative data",
-  "quanprocessed" = "Processed quantitative data",
-  "quancode"      = "Data analysis source code",
-  "software"      = "Software prototypes",
-  "hardware"      = "Hardaware prototypes"
-)
 scale_x_material_type <-
   scale_x_discrete(
     drop = FALSE,
-    limits = rev(names(types_list)),   # rev() is needed when coord_flip()
-    labels = rev(unlist(types_list)))
+    limits = rev(names(types_dict)),   # rev() is needed when coord_flip()
+    labels = rev(unlist(types_dict)))
 
 scale_fill_availability <- scale_fill_manual(
   values = c("#D55E00", "#009E73"),
