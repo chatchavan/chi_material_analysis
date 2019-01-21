@@ -54,7 +54,7 @@ p_avail_prob_by_type <-
   xlab(NULL) +
   theme(legend.position = "bottom")
 
-ggsave("output/avail_prob_by_type.pdf", p_avail_prob_by_type, height = 200/72, width = 300/72, unit = "in", dpi = 72)
+# ggsave("output/avail_prob_by_type.pdf", p_avail_prob_by_type, height = 200/72, width = 300/72, unit = "in", dpi = 72)
 
 
 #===============================================================================
@@ -84,7 +84,7 @@ p_availability_by_type_proportion <-
   ylab("Clopper-Pearson exact 95% CI of the proportion of public materials") +
   coord_flip()
 
-ggsave("output/availability_by_type_proportion.pdf", p_availability_by_type_proportion, height = 150/72, width = 300/72, unit = "in", dpi = 72)
+# ggsave("output/availability_by_type_proportion.pdf", p_availability_by_type_proportion, height = 150/72, width = 300/72, unit = "in", dpi = 72)
 
 
 #===============================================================================
