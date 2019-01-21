@@ -16,3 +16,4 @@ See `r/constants.R`
 # Analysis scripts
 
 * `r/analysis/available_prob_by_type.R` probability of available materials
+* `r/analysis/private_reason.R` probability of reasons for private materials
