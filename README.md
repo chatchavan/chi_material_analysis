@@ -15,7 +15,4 @@ See `r/constants.R`
 
 # Analysis scripts
 
-* `r/_run_all_analysis.R` to run all files below
-* `r/availability.R` for RQ1
-* `r/private.R` for RQ2
-* `r/public.R` for RQ3
+* `r/analysis/available_prob_by_type.R` probability of available materials
