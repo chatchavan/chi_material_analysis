@@ -30,22 +30,9 @@ persist(limesurvey_export_path)
 postsurvey_export_path <- "input/results-post-survey.csv"
 persist(postsurvey_export_path)
 
-should_exclude_mismatch <- FALSE
-persist(should_exclude_mismatch)
-message("Analyzing all data, including those with mismatched expertise level. (constants.R).")
-
 # plot settings
 
 theme_set(theme_grey(base_size = 7))
-
-# ensure that all material types are shown
-scale_x_material_type <-
-  scale_x_discrete(
-    drop = FALSE,
-    breaks = rev(types_all),
-    labels = rev(labels_all))
-
-persist(scale_x_material_type)
 
 # color palette: https://sashat.me/2017/01/11/list-of-20-simple-distinct-colors/
 scale_fill_20 <-  scale_fill_manual(values = c(

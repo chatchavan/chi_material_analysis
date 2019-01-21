@@ -12,8 +12,8 @@ source("r/io.R")
 #===============================================================================
 # retrieve availability frequency
 df_all <-
-  load_data(limesurvey_export_path, exclude_mismatch = FALSE) %>%
   mutate(type = factor(type, levels = rev(types_all)))
+  load_data(limesurvey_export_path)
 
 # (For reference: 665 inivitations; 222 responses; of which 29 didn’t generate any research material)
 
