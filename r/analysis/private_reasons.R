@@ -2,6 +2,8 @@ library(tidyverse)
 library(cleanslate) # devtools::install_github("chatchavan/cleanslate@v0.1.0")
 import::from(broom, tidy)
 import::from(PropCIs, exactci)
+import::from(grid, convertWidth, convertHeight)
+import::from(egg, set_panel_size)
 
 source("r/constants.R")
 source("r/io.R")
@@ -93,8 +95,8 @@ scale_x_reasons <-
 # plot configuration
 plot_config <- list(
 	geom_col(),
-	geom_text(aes(label = label, y = 1), size = 1.5),
-  geom_errorbar(width = 0.5) +
+	geom_text(aes(label = label, y = 1), size = 1.5, hjust = "right"),
+  geom_errorbar(size = 0.3, width = 0.5),
 	scale_x_reasons,
 	ylim(0, 1),
 	xlab(NULL),
@@ -114,10 +116,13 @@ plot_group <- function(type_levels, plot_path) {
     ggplot(aes(x = reason, y = probability, ymin = conf.low, ymax = conf.high)) +
     plot_config
 
-  ggsave(plot_path, p_tmp, height = 120/72, unit = "in", dpi = 72)
+  gtable_tmp <- set_panel_size(p_tmp, width = unit(3.5, "cm"), height = unit(3.5, "cm"))
+  overall_width <- convertWidth(sum(gtable_tmp$widths), "in", valueOnly = TRUE)
+  overall_height <- convertHeight(sum(gtable_tmp$heights), "in", valueOnly = TRUE)
+  ggsave(plot_path, gtable_tmp, width = overall_width + 0.2, height = overall_height)
 
   # return
-  p_tmp
+  invisible(gtable_tmp)
 }
 
 
@@ -128,17 +133,3 @@ plot_group(c("study"), "output/reasons_study.pdf")
 plot_group(c("quanraw",  "quanprocessed", "quancode"), "output/reasons_quan.pdf")
 plot_group(c("qualraw",  "qualcoded", "qualcodebook"), "output/reasons_qual.pdf")
 plot_group(c("software",  "hardware"), "output/reasons_prototypes.pdf")
-
-
-#===============================================================================
-# plot CI
-# p_reasons_ci <-
-  reasons_prob %>%
-  filter(type == "study") %>%
-  ggplot(aes(x = reason, ymin = conf.low, ymax = conf.high)) +
-  geom_errorbar(width = 0.5) +
-  scale_x_reasons +
-  ylim(0, 1) +
-  xlab(NULL) +
-  ylab("Clopper-Pearson exact 95% CI") +
-  coord_flip()
