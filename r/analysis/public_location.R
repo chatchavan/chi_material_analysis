@@ -17,14 +17,14 @@ df_public <-
   df_all %>%
   filter(is_public)
 
-paper_count_by_type <-
-  df_all %>%
+public_count_by_type <-
+  df_public %>%
   group_by(type) %>%
   summarize(paper_count = n_distinct(id)) %>%
   ungroup
 
 persist(df_public)
-persist(paper_count_by_type)
+persist(public_count_by_type)
 rm_all()
 
 
@@ -42,7 +42,7 @@ locations_count <-
   group_by(type, location) %>%
   summarize(n = n()) %>%
   ungroup() %>%
-  right_join(paper_count_by_type, by = "type")
+  right_join(public_count_by_type, by = "type")
 
 locations_prob <-
   locations_count %>%

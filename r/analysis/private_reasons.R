@@ -18,7 +18,7 @@ df_private <-
   filter(!is_public)
 
 paper_count_by_type <-
-  df_all %>%
+  df_private %>%
   group_by(type) %>%
   summarize(paper_count = n_distinct(id)) %>%
   ungroup
