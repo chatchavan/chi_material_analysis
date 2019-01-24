@@ -50,10 +50,8 @@ public_by_type_ci <-
   avail_prob_count %>%
   rowwise() %>%
   do({
-    row_type <- .$type[[1]]
-    exactci(.$public[[1]], .$paper_count[[1]], 0.95) %>%
-      tidy() %>%
-      mutate(type = row_type)
+    the_ci <- exactci(.$public[[1]], .$paper_count[[1]], 0.95) %>% tidy()
+    bind_cols(., the_ci)
   })
 
 #===============================================================================
