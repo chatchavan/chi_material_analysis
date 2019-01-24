@@ -33,7 +33,7 @@ rm_all()
 
 reasons_long <-
   df_private %>%
-  select(id, method, type, reason) %>%
+  select(id, type, reason) %>%
   mutate(reason = str_split(reason, ",")) %>%
   unnest(reason)
 
@@ -100,6 +100,7 @@ plot_config <- list(
 	scale_x_reasons,
 	ylim(0, 1),
 	xlab(NULL),
+  ylab(NULL),
 	coord_flip(),
 	facet_wrap( ~ type, labeller = labeller(type = unlist(types_short_dict)) ),
 	guides(fill = guide_legend(ncol = 1, keywidth = 0.5, keyheight = 0.5)),
