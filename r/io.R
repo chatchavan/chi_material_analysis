@@ -174,24 +174,5 @@ make_long_format <- function(df) {
     left_join(reason, by = c("id", "type")) %>%
     select(-is_exist)  # because of left-join, the table contains only the materials that exist
 
-
-  #-------------------------------------------------------------------------------
-  # determine methodology
-
-  study_method <-
-    df_long %>%
-    mutate(
-      qual = (type %in% types_data_qual),
-      quan = (type %in% types_data_quan)
-    ) %>%
-    gather(key = method, value = "tf", qual, quan) %>%
-    select(id, type, method, tf) %>%
-    filter(tf == TRUE) %>%
-    distinct(id, method)
-
-  df_long <-
-    df_long %>%
-    left_join(study_method, by = "id")
-
   df_long
 }
