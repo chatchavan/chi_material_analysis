@@ -129,3 +129,45 @@ plot_group(c("study"), "output/locations_study.pdf")
 plot_group(c("quanraw",  "quanprocessed", "quancode"), "output/locations_quan.pdf")
 plot_group(c("qualraw",  "qualcoded", "qualcodebook"), "output/locations_qual.pdf")
 plot_group(c("software",  "hardware"), "output/locations_prototypes.pdf")
+
+#===============================================================================
+# Euler diagram
+
+import::from(eulerr, euler, error_plot)
+
+locations_logic_df <-
+  locations_long %>%
+  mutate(presence = TRUE) %>%
+  spread(location, presence, fill = FALSE)
+
+study_euler <-
+  locations_logic_df %>%
+  filter(type == "study") %>%
+  select(-id, -type) %>%
+  euler(shape = "ellipse")
+
+plot(study_euler, quantities = TRUE)
+euler_correlation <- sqrt(1 - study_euler$stress)
+euler_correlation
+# error_plot(study_euler)
+
+
+
+
+#-------------------------------------------------------------------------------
+# NEXT: an attempt to vectorize euler() across types
+
+euler_df <-
+  locations_logic_df %>%
+  group_by(type) %>%
+  do({
+    the_euler <- . %>% select(-id, -type) %>% euler()
+    tibble(type = .$type[[1]], euler = list(the_euler))
+  })
+
+View(euler_df)
+
+euler_df$euler[[1]]  # <--- problem: this is still a functional
+
+euler_df %>%
+  mutate(correlation = sqrt(1 - unlist(euler)$stress))
