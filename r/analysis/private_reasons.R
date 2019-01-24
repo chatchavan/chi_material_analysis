@@ -35,27 +35,35 @@ reasons_long <-
   mutate(reason = str_split(reason, ",")) %>%
   unnest(reason)
 
-prob_reasons <-
-
-  # count reasons
+reasons_count <-
   reasons_long %>%
   group_by(type, reason) %>%
   summarize(n = n()) %>%
   ungroup() %>%
+  right_join(paper_count_by_type, by = "type")
 
-  # convert the count to probability
-  right_join(paper_count_by_type, by = "type") %>%
+reasons_prob <-
+  reasons_count %>%
+
+  # calculate CI
+  rowwise() %>%
+  do({
+    the_ci <- exactci(.$n[[1]], .$paper_count[[1]], 0.95) %>% tidy()
+    bind_cols(., the_ci)
+  }) %>%
+
+  # calculate percentage probability
   mutate(probability = n / paper_count) %>%
-  select(type, reason, probability) %>%
   mutate(label = sprintf("%2.0f %%", probability * 100))
+
 
 
 #===============================================================================
 # prepare for the plot
 
 # ensure that NA is labeled (we shouldn't need this if scale_x_discrete(na.values = "Unspecified") works)
-prob_reasons <-
-  prob_reasons %>%
+reasons_prob <-
+  reasons_prob %>%
   replace_na(list(reason = "NA"))
 
 # labels and order
@@ -85,7 +93,8 @@ scale_x_reasons <-
 # plot configuration
 plot_config <- list(
 	geom_col(),
-	geom_text(aes(label = label), size = 1.5, nudge_y = 0.1),
+	geom_text(aes(label = label, y = 1), size = 1.5),
+  geom_errorbar(width = 0.5) +
 	scale_x_reasons,
 	ylim(0, 1),
 	xlab(NULL),
@@ -99,10 +108,10 @@ plot_config <- list(
 # groupped plot function
 plot_group <- function(type_levels, plot_path) {
   p_tmp <-
-    prob_reasons %>%
+    reasons_prob %>%
     filter(type %in% type_levels) %>%
     mutate(type = factor(type, levels = type_levels)) %>%
-    ggplot(aes(x = reason, y = probability)) +
+    ggplot(aes(x = reason, y = probability, ymin = conf.low, ymax = conf.high)) +
     plot_config
 
   ggsave(plot_path, p_tmp, height = 120/72, unit = "in", dpi = 72)
@@ -120,3 +129,16 @@ plot_group(c("quanraw",  "quanprocessed", "quancode"), "output/reasons_quan.pdf"
 plot_group(c("qualraw",  "qualcoded", "qualcodebook"), "output/reasons_qual.pdf")
 plot_group(c("software",  "hardware"), "output/reasons_prototypes.pdf")
 
+
+#===============================================================================
+# plot CI
+# p_reasons_ci <-
+  reasons_prob %>%
+  filter(type == "study") %>%
+  ggplot(aes(x = reason, ymin = conf.low, ymax = conf.high)) +
+  geom_errorbar(width = 0.5) +
+  scale_x_reasons +
+  ylim(0, 1) +
+  xlab(NULL) +
+  ylab("Clopper-Pearson exact 95% CI") +
+  coord_flip()
